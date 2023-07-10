@@ -1,0 +1,17 @@
+{
+  "name": "@e-medya-web/unocss-preset",
+  "type": "module",
+  "description": "UnoCSS preset",
+  "main": "src/index.js",
+  "types": "src/index.d.js",
+  "files": [
+    "src"
+  ],
+  "scripts": {},
+  "dependencies": {
+    "@iconify/utils": "^2.1.7"
+  },
+  "devDependencies": {
+    "unocss": "^0.53.4"
+  }
+}

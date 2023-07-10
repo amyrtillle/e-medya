@@ -1,0 +1,6 @@
+import type { BlockInterface } from '../../interfaces/block.interface'
+import type { Strapi{{name}}Component } from '../../interfaces/strapi/components/{{ kebabCase name}}.component'
+
+export interface {{name}}Block extends BlockInterface<Omit<Strapi{{name}}Component, '__component' | 'id'>> {
+  type: '{{kebabCase name}}'
+}

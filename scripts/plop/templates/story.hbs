@@ -1,0 +1,23 @@
+import type { Meta, StoryObj } from '@storybook/vue3'
+
+import {{name}} from './{{name}}.vue'
+
+const meta = {
+  component: {{name}}
+} satisfies Meta<typeof {{name}}>
+
+export default meta
+type Story = StoryObj<typeof meta>
+
+export const Primary = {
+  args: {},
+  render: args => ({
+    components: { {{name}} },
+    setup() {
+      return { args }
+    },
+    template: `
+      <{{ kebabCase name}}></{{ kebabCase name}}>
+    `
+  })
+} satisfies Story

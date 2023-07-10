@@ -1,0 +1,27 @@
+:root {
+  /* Font Family */
+  --em-typography-font-family-primary: 'Inter', 'system-ui', '-apple-system', sans-serif;
+  --em-typography-font-family-secondary: 'Outfit', 'system-ui', '-apple-system', sans-serif;
+
+  /* Font Weight */
+  --em-typography-font-weight-light: 300;
+  --em-typography-font-weight-normal: 400;
+  --em-typography-font-weight-medium: 500;
+  --em-typography-font-weight-semibold: 600;
+  --em-typography-font-weight-bold: 700;
+
+  /* Font Sizes */
+  --em-typography-font-size-xs: 14px;
+  --em-typography-font-size-s: 18px;
+  --em-typography-font-size-m: 24px;
+  --em-typography-font-size-l: 36px;
+  --em-typography-font-size-xl: 72px;
+  --em-typography-font-size-2xl: 96px;
+
+  /* Line heights */
+  --em-typography-line-height-xs: 18px;
+  --em-typography-line-height-s: 20px;
+  --em-typography-line-height-m: 24px;
+  --em-typography-line-height-l: 28px;
+  --em-typography-line-height-xl: 32px;
+}

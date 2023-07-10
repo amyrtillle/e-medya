@@ -1,0 +1,7 @@
+:root {
+  --em-breakpoint-xs: '360px';
+  --em-breakpoint-s: '768px';
+  --em-breakpoint-m: '1024px';
+  --em-breakpoint-l: '1366px';
+  --em-breakpoint-xl: '1920px';
+}

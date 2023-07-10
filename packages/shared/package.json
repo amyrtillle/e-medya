@@ -1,0 +1,26 @@
+{
+  "name": "@e-medya-web/shared",
+  "type": "module",
+  "private": true,
+  "description": "Shared utilities",
+  "exports": {
+    ".": "./",
+    "./vite": "./src/vite.js"
+  },
+  "typesVersions": {
+    "*": {
+      "vite": [
+        "./src/vite.d.ts"
+      ],
+      "type-utils": [
+        "./src/type-utils.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "src"
+  ],
+  "dependencies": {
+    "vite-svg-loader": "^4.0.0"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "extends": "@antfu",
+  "ignorePatterns": ["storybook-static", "assets", "static"],
+  "rules": {
+    "curly": ["error", "all"],
+    "newline-before-return": ["error"],
+  },
+  "overrides": [
+    {
+      "files": [".github/workflows/*.yml"],
+      "rules": {
+        "yml/no-empty-mapping-value": "off"
+      }
+    },
+    // {
+    //   "files": ["*.stories.ts"],
+    //   "rules": {
+    //     "@typescript-eslint/consistent-type-assertions": "off"
+    //   }
+    // }
+  ]
+}
