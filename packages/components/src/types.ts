@@ -1,4 +1,16 @@
-export type Icon = `i-em:${string}`
+// export type Icon = `i-em:${string}`
+
+export type TextContentType = 'h1' | 'h2' | 'h3' | 'p' | 'span'
+
+export type Variant = 'primary' | 'secondary' | 'tertiary'
+
+export type Typo = 'typo-primary' | 'typo-secondary'
+
+export interface TextContentProps {
+  typo: Typo
+  tag: TextContentType
+  text: string
+}
 
 // export type LinkComponent = Component<{ href?: unknown }> | 'a'
 
@@ -9,8 +21,6 @@ export type Icon = `i-em:${string}`
 // export type HTMLTag = 'div' | 'p' | 'span' | 'article' | 'section'
 
 // export type Size = '3xs' | '2xs' | 'xs' | 's' | 'm' | 'l' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl'
-
-// export type Variant = 'primary' | 'secondary' | 'tertiary'
 
 // export type Details = Array<{ label: string; value: string }>
 

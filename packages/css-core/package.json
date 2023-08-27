@@ -1,24 +1,23 @@
 {
-    "name": "@e-medya-web/css-core",
-    "private": true,
-    "description": "Global CSS styles library",
-    "main": "src/index.css",
-    "scripts": {
-      "dev": "postcss --watch src/index.css -o main.css",
-      "lint": "stylelint --cache \"**/*.css\"",
-      "lint:fix": "stylelint --fix \"**/*.css\""
-    },
-    "dependencies": {
-      "sanitize.css": "^13.0.0"
-    },
-    "devDependencies": {
-      "autoprefixer": "^10.4.14",
-      "cssnano": "^6.0.1",
-      "postcss": "^8.4.24",
-      "postcss-cli": "^10.1.0"
-    },
-    "lint-staged": {
-      "*.css": "pnpm lint:fix"
-    }
+  "name": "@e-medya-web/css-core",
+  "private": true,
+  "description": "Global CSS styles library",
+  "main": "src/index.css",
+  "scripts": {
+    "dev": "postcss --watch src/index.css -o main.css",
+    "lint": "stylelint --cache \"**/*.css\"",
+    "lint:fix": "stylelint --fix \"**/*.css\""
+  },
+  "dependencies": {
+    "sanitize.css": "^13.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "cssnano": "^6.0.1",
+    "postcss": "^8.4.24",
+    "postcss-cli": "^10.1.0"
+  },
+  "lint-staged": {
+    "*.css": "pnpm lint:fix"
   }
-  
+}
