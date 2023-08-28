@@ -11,7 +11,15 @@ const meta = {
     },
     typo: {
       control: 'select',
-      options: ['typo-primary', 'typo-secondary'],
+      options: ['primary', 'secondary'],
+    },
+    variant: {
+      control: 'select',
+      options: ['primary', 'secondary', 'tertiary'],
+    },
+    size: {
+      control: 'select',
+      options: ['xs', 's', 'm'],
     },
   },
 } satisfies Meta<typeof TextContent>
@@ -23,6 +31,8 @@ export const Primary = {
   args: {
     text: 'Hello World',
     tag: 'h1',
-    typo: 'typo-primary',
+    typo: 'primary',
+    variant: 'primary',
+    size: 'm',
   },
 } satisfies Story
