@@ -1,7 +1,12 @@
 <script setup lang="ts">
 import type { TextContentProps } from '../../types'
 
-defineProps<TextContentProps>()
+withDefaults(defineProps<TextContentProps>(), {
+  tag: 'p',
+  typo: 'primary',
+  variant: 'primary',
+  size: 'xs',
+})
 </script>
 
 <template>
@@ -48,6 +53,10 @@ span.s, p.s {
 
 span.m, p.m {
   font-size: var(--em-typography-font-size-m);
+}
+
+span.l, p.l {
+  font-size: var(--em-typography-font-size-l);
 }
 
 h3, s{

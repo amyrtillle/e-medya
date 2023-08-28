@@ -7,11 +7,16 @@ export type Variant = 'primary' | 'secondary' | 'tertiary'
 export type Size = '3xs' | '2xs' | 'xs' | 's' | 'm' | 'l' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl'
 
 export interface TextContentProps {
-  typo: Variant
+  typo?: Variant
   variant: Variant
-  size: Size
-  tag: TextContentType
+  size?: Size
+  tag?: TextContentType
   text: string
+}
+
+export interface ButtonProps {
+  variant?: Variant
+  label: string
 }
 
 // export type LinkComponent = Component<{ href?: unknown }> | 'a'

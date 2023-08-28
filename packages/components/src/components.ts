@@ -3,6 +3,7 @@
 
 export { default as EmTextContent } from './atoms/EmTextContent/EmTextContent.vue'
 
-// COMPONENTS EXPORTS'''''''
+export { default as EmButton } from './atoms/EmButton/EmButton.vue';
+// COMPONENTS EXPORTS''''''''
 
 export * from './types'
