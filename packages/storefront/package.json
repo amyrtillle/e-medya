@@ -6,7 +6,6 @@
   "scripts": {
     "build": "nuxt build",
     "compile-ts": "vue-tsc --noEmit",
-    "coverage": "vitest run --coverage",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
@@ -32,7 +31,6 @@
     "nuxt": "^3.6.1",
     "nuxt-schema-org": "^2.2.0",
     "nuxt-simple-sitemap": "^2.7.0",
-    "nuxt-vitest": "^0.8.6",
     "qrcode.vue": "^3.4.0",
     "rehype-external-links": "^2.1.0",
     "rehype-stringify": "^9.0.3",

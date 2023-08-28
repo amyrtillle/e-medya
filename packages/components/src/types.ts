@@ -19,6 +19,13 @@ export interface ButtonProps {
   label: string
 }
 
+// export interface MenuProps {
+//   isOpen: {
+//     boolean: boolean
+//     writable: true
+//   }
+// }
+
 // export type LinkComponent = Component<{ href?: unknown }> | 'a'
 
 // export type ActionComponent = LinkComponent | 'button'

@@ -4,7 +4,6 @@
     "module": "esnext",
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
-    "types": ["vitest"]
   },
   "include": ["vite.config.ts"]
 }

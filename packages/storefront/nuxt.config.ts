@@ -5,7 +5,7 @@ import { publicEnv } from './config/env'
 export default defineNuxtConfig({
   devServer: {
     host: 'localhost',
-    port: 3001,
+    port: 3005,
   },
   runtimeConfig: {
     public: publicEnv,
