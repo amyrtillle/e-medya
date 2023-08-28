@@ -39,12 +39,12 @@ module.exports = (plop) => {
     actions: [
       {
         type: 'add',
-        path: `${folder}/{{ kebabCase type }}/{{ name }}/{{ name }}.vue`,
+        path: `${folder}/{{ kebabCase type }}/Em{{ name }}/Em{{ name }}.vue`,
         templateFile: `${templateDir}/component.hbs`,
       },
       {
         type: 'add',
-        path: `${folder}/{{ kebabCase type }}/{{ name }}/{{ name }}.stories.ts`,
+        path: `${folder}/{{ kebabCase type }}/Em{{ name }}/Em{{ name }}.stories.ts`,
         templateFile: `${templateDir}/story.hbs`,
       },
 
@@ -53,7 +53,7 @@ module.exports = (plop) => {
         pattern: /(\/\/ COMPONENTS EXPORTS)/g,
         path: `${componentsFile}/components.ts`,
         template:
-          'export { default as {{ name }} } from \'./{{ kebabCase type }}/{{ name }}/{{ name }}.vue\';\n$1\'',
+          'export { default as Em{{ name }} } from \'./{{ kebabCase type }}/Em{{ name }}/Em{{ name }}.vue\';\n$1\'',
       },
     ],
   })

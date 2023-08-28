@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 
-import TextContent from './TextContent.vue'
+import EmTextContent from './EmTextContent.vue'
 
 const meta = {
-  component: TextContent,
+  component: EmTextContent,
   argTypes: {
     tag: {
       control: 'select',
@@ -22,7 +22,7 @@ const meta = {
       options: ['xs', 's', 'm'],
     },
   },
-} satisfies Meta<typeof TextContent>
+} satisfies Meta<typeof EmTextContent>
 
 export default meta
 type Story = StoryObj<typeof meta>

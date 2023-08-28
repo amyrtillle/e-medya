@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import type { {{name}}Props } from '../../types'
+import type { ProutProps } from '../../types'
 
-defineProps<{{name}}Props>()
+defineProps<ProutProps>()
 </script>
 
 <template>

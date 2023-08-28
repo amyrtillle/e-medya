@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 
-import Em{{name}} from './Em{{name}}.vue'
+import EmProut from './EmProut.vue'
 
 const meta = {
-  component: Em{{name}},
+  component: EmProut,
   argTypes: {},
-} satisfies Meta<typeof Em{{name}}>
+} satisfies Meta<typeof EmProut>
 
 export default meta
 type Story = StoryObj<typeof meta>
