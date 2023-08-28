@@ -6,6 +6,8 @@ export type Variant = 'primary' | 'secondary' | 'tertiary'
 
 export type Size = '3xs' | '2xs' | 'xs' | 's' | 'm' | 'l' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl'
 
+export type Icon = 'play' | 'calendar' | 'cast' | 'write' | 'verified' | 'money' | 'checkmark' | 'question' | 'folder' | 'translate' | 'voice' | 'message' | 'phone' | 'time' | 'security' | 'search' | 'send' | 'account' | 'pin' | 'rain' | 'sun' | 'validated' | 'home' | 'instagram' | 'linkedin' | 'youtube'
+
 export interface TextContentProps {
   typo?: Variant
   variant: Variant
@@ -17,6 +19,10 @@ export interface TextContentProps {
 export interface ButtonProps {
   variant?: Variant
   label: string
+}
+
+export interface IconProps {
+  src: Icon
 }
 
 // export interface MenuProps {
