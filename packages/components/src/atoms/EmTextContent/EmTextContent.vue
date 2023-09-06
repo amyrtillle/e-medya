@@ -13,6 +13,7 @@ withDefaults(defineProps<TextContentProps>(), {
   <component
     :is="tag" class="text-content"
     :class="{ [`typo-${typo}`]: true, [`variant-${variant}`]: true, [`${size}`]: true }"
+    :href="href"
   >
     {{ text }}
   </component>
@@ -39,23 +40,27 @@ withDefaults(defineProps<TextContentProps>(), {
   color: var(--em-color-libery)
 }
 
-span.xs, p.xs {
+a:hover{
+  color: var(--em-color-libery)
+}
+
+a.xs, span.xs, p.xs {
   font-size: var(--em-typography-font-size-xs);
 }
 
-span.xs.variant-tertiary, p.xs.variant-tertiary {
+a.xs.variant-tertiary, span.xs.variant-tertiary, p.xs.variant-tertiary {
   font-weight: var(--em-typography-font-weight-semibold);
 }
 
-span.s, p.s {
+a.s, span.s, p.s {
   font-size: var(--em-typography-font-size-s);
 }
 
-span.m, p.m {
+a.m, span.m, p.m {
   font-size: var(--em-typography-font-size-m);
 }
 
-span.l, p.l {
+a.l, span.l, p.l {
   font-size: var(--em-typography-font-size-l);
 }
 

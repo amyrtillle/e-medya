@@ -5,6 +5,7 @@ export { default as EmTextContent } from './atoms/EmTextContent/EmTextContent.vu
 export { default as EmButton } from './atoms/EmButton/EmButton.vue'
 export { default as EmMenu } from './atoms/EmMenu/EmMenu.vue'
 export { default as EmIcon } from './atoms/EmIcon/EmIcon.vue'
-// COMPONENTS EXPORTS'''''''''''
+export { default as EmNavBar } from './molecules/EmNavBar/EmNavBar.vue';
+// COMPONENTS EXPORTS''''''''''''''
 
 export * from './types'

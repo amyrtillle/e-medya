@@ -2,13 +2,14 @@
 import type { ButtonProps } from '../../types'
 
 withDefaults(defineProps<ButtonProps>(), {
+  link: '#',
   variant: 'primary',
 })
 </script>
 
 <template>
-  <div class="button">
-    <a :class="{ [`variant-${variant}`]: true }">{{ label }}</a>
+  <div class="em-button">
+    <a :class="{ [`variant-${variant}`]: true }" :href="link">{{ label }}</a>
   </div>
 </template>
 
