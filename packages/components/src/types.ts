@@ -11,7 +11,6 @@ export type Icon = 'play' | 'calendar' | 'cast' | 'write' | 'verified' | 'money'
 export type Input = 'radio' | 'checkbox' | 'select' | 'text' | 'textarea' | 'email' | 'phone' | 'file' | 'date' | 'time'
 
 export interface TextContentProps {
-  id: number
   typo?: Variant
   variant: Variant
   size?: Size
