@@ -18,7 +18,7 @@ const props = defineProps({
 <template>
   <div class="headline">
     <hr v-if="variant === 'primary'">
-    <EmTextContent tag="p" size="s" typo="secondary" :text="text" variant="tertiary" />
+    <EmTextContent tag="p" size="xs" typo="secondary" :text="text" variant="tertiary" />
     <hr v-if="variant === 'secondary'">
   </div>
 </template>
@@ -28,7 +28,8 @@ const props = defineProps({
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: var(--em-spacing-s)
+  gap: var(--em-spacing-s);
+  height: fit-content;
 }
 hr{
   margin: 0;
