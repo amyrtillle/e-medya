@@ -5,14 +5,13 @@ withDefaults(defineProps<TextContentProps>(), {
   tag: 'p',
   typo: 'primary',
   variant: 'primary',
-  size: 'xs',
 })
 </script>
 
 <template>
   <component
     :is="tag" class="text-content"
-    :class="{ [`typo-${typo}`]: true, [`variant-${variant}`]: true, [`${size}`]: true }" :href="href"
+    :class="{ [`typo-${typo}`]: true, [`variant-${variant}`]: true, [`${size}`]: true }" v-bind="{ href }"
   >
     {{ text }}
   </component>
