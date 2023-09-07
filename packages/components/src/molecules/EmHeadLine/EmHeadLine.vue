@@ -1,18 +1,25 @@
 <script setup lang="ts">
 import { EmTextContent } from '../../components'
 
+import type { Variant } from '../../types'
+
 const props = defineProps({
   text: {
     type: String,
     default: 'Headline title',
+  },
+  variant: {
+    type: String as PropType<Variant>,
+    default: 'primary',
   },
 })
 </script>
 
 <template>
   <div class="headline">
-    <hr>
+    <hr v-if="variant === 'primary'">
     <EmTextContent tag="p" size="s" typo="secondary" :text="text" variant="tertiary" />
+    <hr v-if="variant === 'secondary'">
   </div>
 </template>
 
