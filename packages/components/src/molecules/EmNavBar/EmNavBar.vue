@@ -20,7 +20,7 @@ nav{
   flex-direction: column;
   width: fit-content;
   height: fit-content;
-  padding: 50px 10px 50px 50px;
+  padding: 50px 20px 50px 50px;
   gap: 30px;
   border-radius: 15px 0px 0px 15px;
 }
