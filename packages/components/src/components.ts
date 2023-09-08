@@ -9,6 +9,7 @@ export { default as EmNavBar } from './molecules/EmNavBar/EmNavBar.vue';
 export { default as EmHeadLine } from './molecules/EmHeadLine/EmHeadLine.vue';
 export { default as EmSectionTitle } from './molecules/EmSectionTitle/EmSectionTitle.vue';
 export { default as EmTextSection } from './organisms/EmTextSection/EmTextSection.vue';
-// COMPONENTS EXPORTS'''''''''''''''''
+export { default as EmServiceCard } from './organisms/EmServiceCard/EmServiceCard.vue';
+// COMPONENTS EXPORTS''''''''''''''''''
 
 export * from './types'

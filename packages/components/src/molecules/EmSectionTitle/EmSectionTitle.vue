@@ -10,6 +10,7 @@ const props = defineProps({
     type: String,
     default: 'Section text',
   },
+
 })
 </script>
 
