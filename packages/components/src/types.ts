@@ -12,13 +12,12 @@ export type Input = 'radio' | 'checkbox' | 'select' | 'text' | 'textarea' | 'ema
 
 export interface TextContentProps {
   typo?: Variant
-  variant: Variant
+  variant?: Variant
   size?: Size
   tag?: TextContentType
   text: string
   href?: string
 }
-
 export interface ButtonProps {
   variant?: Variant
   label: string
