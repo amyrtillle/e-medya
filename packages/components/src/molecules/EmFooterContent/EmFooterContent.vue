@@ -33,20 +33,41 @@ import EmTextContent from '../../atoms/EmTextContent/EmTextContent.vue'
   display: flex;
   flex-direction: column;
   align-items: left;
+  gap: var(--em-spacing-xl);
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
   gap: var(--em-spacing-xxl);
 }
 
 .colored{
   display: flex;
   flex-direction: column;
-  gap: var(--em-spacing-xxl);
 }
 
 .colored h2{
   margin-right: var(--em-spacing-xs);
 }
 
-span, a {
-  font-size: var(--em-typography-font-size-m);
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: var(--em-spacing-m);
+}
+
+.contact span, .contact a{
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+.footer-content, .colored{
+  flex-direction: row;
+  justify-content: space-between;
+}
 }
 </style>
