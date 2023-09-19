@@ -29,5 +29,24 @@ import EmTextContent from '../../atoms/EmTextContent/EmTextContent.vue'
 </template>
 
 <style scoped>
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: var(--em-spacing-xxl);
+}
 
+.colored{
+  display: flex;
+  flex-direction: column;
+  gap: var(--em-spacing-xxl);
+}
+
+.colored h2{
+  margin-right: var(--em-spacing-xs);
+}
+
+span, a {
+  font-size: var(--em-typography-font-size-m);
+}
 </style>
