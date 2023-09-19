@@ -12,6 +12,7 @@ export { default as EmTextSection } from './organisms/EmTextSection/EmTextSectio
 export { default as EmServiceCard } from './organisms/EmServiceCard/EmServiceCard.vue'
 export { default as EmSocialSection } from './molecules/EmSocialSection/EmSocialSection.vue';
 export { default as EmSubFooter } from './molecules/EmSubFooter/EmSubFooter.vue';
-// COMPONENTS EXPORTS'''''''''''''''''''''
+export { default as EmFooterContent } from './molecules/EmFooterContent/EmFooterContent.vue';
+// COMPONENTS EXPORTS''''''''''''''''''''''
 
 export * from './types'
