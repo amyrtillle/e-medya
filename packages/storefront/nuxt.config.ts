@@ -11,10 +11,8 @@ export default defineNuxtConfig({
     public: publicEnv,
   },
   modules: [
-    '@nuxtjs/i18n',
     '@unocss/nuxt',
     '@vueuse/nuxt',
-    'nuxt-vitest',
   ],
   css: [
     '@e-medya-web/css-core',
@@ -37,24 +35,7 @@ export default defineNuxtConfig({
   },
   telemetry: false,
   // modules
-  i18n: {
-    defaultLocale: 'fr-fr',
-    langDir: 'locales',
-    lazy: true,
-    locales: [
-      { code: 'fr-fr', file: 'fr-fr.json', name: 'Français' },
-    ],
-    rootRedirect: {
-      path: 'fr-fr',
-      statusCode: 301,
-    },
-    strategy: 'prefix',
-    vueI18n: 'config/i18n.ts',
-  },
   unocss: {
     presets: [unocss()],
-  },
-  vitest: {
-    startOnBoot: true,
   },
 })
