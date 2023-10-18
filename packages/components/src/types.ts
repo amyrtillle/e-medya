@@ -28,6 +28,11 @@ export interface IconProps {
   src: Icon
 }
 
+export interface ImageProps {
+  src: string
+  alt?: string
+  variant?: Variant
+}
 // export interface InputProps {
 //   type: Input
 //   label: string

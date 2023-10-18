@@ -14,7 +14,8 @@ export { default as EmSocialSection } from './molecules/EmSocialSection/EmSocial
 export { default as EmSubFooter } from './molecules/EmSubFooter/EmSubFooter.vue'
 export { default as EmFooterContent } from './molecules/EmFooterContent/EmFooterContent.vue'
 export { default as EmFooter } from './organisms/EmFooter/EmFooter.vue'
-export { default as EmHeaderSeparator } from './atoms/EmHeaderSeparator/EmHeaderSeparator.vue';
-// COMPONENTS EXPORTS''''''''''''''''''''''''
+export { default as EmHeaderSeparator } from './atoms/EmHeaderSeparator/EmHeaderSeparator.vue'
+export { default as EmImageCard } from './atoms/EmImageCard/EmImageCard.vue';
+// COMPONENTS EXPORTS''''''''''''''''''''''''''
 
 export * from './types'
