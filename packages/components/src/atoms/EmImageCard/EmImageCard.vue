@@ -9,7 +9,7 @@ withDefaults(defineProps<ImageProps>(), {
 </script>
 
 <template>
-  <img :src="src" :class="{ [`variant-${variant}`]: true }" :alt="alt" />
+  <img :src="src" class="em-image-card" :class="{ [`variant-${variant}`]: true }" :alt="alt" />
 </template>
 
 <style scoped>

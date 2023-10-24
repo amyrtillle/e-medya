@@ -73,12 +73,11 @@ p.m {
 
 a.l,
 span.l,
-p.l {
+p.l, h3.l {
   font-size: var(--em-typography-font-size-l);
 }
 
-h3,
-s {
+h3.m {
   font-weight: var(--em-typography-font-weight-medium);
 }
 </style>
