@@ -16,6 +16,7 @@ export { default as EmFooterContent } from './molecules/EmFooterContent/EmFooter
 export { default as EmFooter } from './organisms/EmFooter/EmFooter.vue'
 export { default as EmHeaderSeparator } from './atoms/EmHeaderSeparator/EmHeaderSeparator.vue'
 export { default as EmImageCard } from './atoms/EmImageCard/EmImageCard.vue';
-// COMPONENTS EXPORTS''''''''''''''''''''''''''
+export { default as EmContentImage } from './molecules/EmContentImage/EmContentImage.vue';
+// COMPONENTS EXPORTS'''''''''''''''''''''''''''
 
 export * from './types'
