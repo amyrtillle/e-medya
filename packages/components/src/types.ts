@@ -15,7 +15,7 @@ export interface TextContentProps {
   variant?: Variant
   size?: Size
   tag?: TextContentType
-  text: string
+  text: Array<string> | string
   href?: string
 }
 export interface ButtonProps {
