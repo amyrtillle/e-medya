@@ -1,6 +1,6 @@
 // export type Icon = `i-em:${string}`
 
-export type TextContentType = 'h1' | 'h2' | 'h3' | 'p' | 'span' | 'a'
+export type TextContentType = 'h1' | 'h2' | 'h3' | 'p' | 'span' | 'a' | 'label'
 
 export type Variant = 'primary' | 'secondary' | 'tertiary'
 
@@ -8,7 +8,7 @@ export type Size = '3xs' | '2xs' | 'xs' | 's' | 'm' | 'l' | 'xl' | '2xl' | '3xl'
 
 export type Icon = 'play' | 'calendar' | 'cast' | 'write' | 'verified' | 'money' | 'checkmark' | 'question' | 'folder' | 'translate' | 'voice' | 'message' | 'phone' | 'time' | 'security' | 'search' | 'send' | 'account' | 'pin' | 'rain' | 'sun' | 'validated' | 'home' | 'instagram' | 'linkedin' | 'youtube'
 
-export type Input = 'radio' | 'checkbox' | 'select' | 'text' | 'textarea' | 'email' | 'phone' | 'file' | 'date' | 'time'
+export type Input = 'radio' | 'checkbox' | 'select' | 'text' | 'textarea' | 'email' | 'phone' | 'file' | 'date' | 'time' | 'select-checkbox'
 
 export interface TextContentProps {
   typo?: Variant
@@ -17,6 +17,7 @@ export interface TextContentProps {
   tag?: TextContentType
   text: Array<string> | string
   href?: string
+  for?: string
 }
 export interface ButtonProps {
   variant?: Variant
@@ -33,14 +34,21 @@ export interface ImageProps {
   alt?: string
   variant?: Variant
 }
-// export interface InputProps {
-//   type: Input
-//   label: string
-//   placeholder?: string
-//   required?: boolean
-//   icon?: Icon
-//   id: string
-// }
+export interface InputProps {
+  type: Input
+  label: string
+  placeholder?: string
+  required?: boolean
+  icon?: Icon
+  name: string
+  ariaLabel?: string
+  options?: [
+    {
+      value: string
+      text: string
+    }
+  ]
+}
 
 // export interface MenuProps {
 //   isOpen: {

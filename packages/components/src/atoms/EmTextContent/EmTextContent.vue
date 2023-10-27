@@ -49,31 +49,34 @@ a:hover {
 
 a.xs,
 span.xs,
-p.xs {
+p.xs,
+label.xs {
   font-size: var(--em-typography-font-size-xs);
 }
 
-a.xs.variant-tertiary,
-span.xs.variant-tertiary,
-p.xs.variant-tertiary {
+.bold {
   font-weight: var(--em-typography-font-weight-semibold);
 }
 
 a.s,
 span.s,
-p.s {
+p.s,
+label.s {
   font-size: var(--em-typography-font-size-s);
 }
 
 a.m,
 span.m,
-p.m {
+p.m, 
+label.m {
   font-size: var(--em-typography-font-size-m);
 }
 
 a.l,
 span.l,
-p.l, h3.l {
+p.l, 
+label.l
+h3.l {
   font-size: var(--em-typography-font-size-l);
 }
 
