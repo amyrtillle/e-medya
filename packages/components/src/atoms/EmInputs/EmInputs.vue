@@ -15,11 +15,44 @@ withDefaults(defineProps<InputProps & IconProps>(), {
       value: 'value',
       text: 'select'
     },
+    {
+      value: 'value',
+      text: 'select'
+    },
+    {
+      value: 'value',
+      text: 'select'
+    },
   ],
   ariaLabel: undefined,
   src : undefined,
 }, 
 )
+const dropDown = ref(null)
+const isDropDownVisible = ref(false)
+const selectedOption = ref(null)
+const toggleOptionSelect = (option) => {
+  selectedOption.value = option.text
+  isDropDownVisible.value = false
+}
+
+const mappedSelectedOption = computed(()=> {
+  return (selectedOption.value?.text || selectedOption.value) || 'select an option'
+})
+
+const closeDropDown = (element) => {
+  if(!dropDown.value.contains(element.target)){
+    isDropDownVisible.value = false
+  }
+}
+
+onMounted(()=> {
+ window.addEventListener('click',closeDropDown)
+})
+
+onBeforeUnmount(()=> {
+window.addEventListener('click',closeDropDown)
+})
 
 </script>
 
@@ -38,21 +71,43 @@ withDefaults(defineProps<InputProps & IconProps>(), {
     <!-- input -->
     <input class="input" :aria-label="ariaLabel" :class="type" :type="type" :placeholder="placeholder" :name="label"  :required="required" :id="name" />
   </div>
-  <div v-else-if="type == 'checkbox'" class="em-checkbox checkbox-wrapper-30">
 
+  <div v-else-if="type == 'checkbox'" class="em-checkbox">
     <span class="checkbox">
       <input class="input" :class="type" :type="type" :placeholder="placeholder" :name="label"  :required="required" :id="name" />
       <svg>
-        <use xlink:href="#checkbox-30" class="checkbox"></use>
+        <use xlink:href="#checkbox-svg" class="checkbox"></use>
       </svg>
     </span>
     <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
-      <symbol id="checkbox-30" viewBox="0 0 22 22">
+      <symbol id="checkbox-svg" viewBox="0 0 22 22">
         <path fill="none" stroke="#5E539F" d="M5.5,11.3L9,14.8L20.2,3.3l0,0c-0.5-1-1.5-1.8-2.7-1.8h-13c-1.7,0-3,1.3-3,3v13c0,1.7,1.3,3,3,3h13 c1.7,0,3-1.3,3-3v-13c0-0.4-0.1-0.8-0.3-1.2"/>
       </symbol>
     </svg>
     <EmTextContent tag="label" class="typo-primary variant-secondary s" :for="name" :text="label" />
   </div>
+
+  <div v-else class="em-select">
+    <div class="content">
+      <EmIcon v-if="src" :src="src" />
+
+      <div class="label">
+        <EmTextContent v-if="label" tag="label" class="typo-primary variant-tertiary s bold" :for="name" :text="label" />
+        <EmTextContent v-if="required" tag="span" class="typo-primary variant-secondary s" text="*" :id="name"/>
+      </div>
+    </div>
+    <div class="dropdown-wrapper" ref="dropDown">
+      <div class="dropdown-selected-option" @click="isDropDownVisible = true">
+        <EmTextContent tag="span" class="typo-primary variant-tertiary s" :text="mappedSelectedOption" />
+      </div>
+      <div class="options-wrapper" v-if="isDropDownVisible">
+        <div class="option" v-for="option in options" :key="option.value" @click="toggleOptionSelect(option)">
+          <EmTextContent tag="span" class="typo-primary variant-tertiary s" :text="option.text" />
+        </div>
+      </div>
+    </div>
+  </div>
+
 </template>
 
 <style scoped>
@@ -163,4 +218,35 @@ withDefaults(defineProps<InputProps & IconProps>(), {
       height: 100%;
       width: 100%;
     }
+
+    .dropdown-wrapper{
+      padding: 16px;
+      cursor: pointer;
+      max-width: 200px;
+      margin: 0 auto;
+    }
+
+    .dropdown-selected-option{
+      border: solid 1px #792f2f;
+      border-radius: 8px;
+      box-sizing: border-box;
+      margin-bottom: 4px;
+      padding: 16px;
+    }
+
+    .option:hover{
+      background: #c5c5c5;
+    }
+
+    .option{
+      padding: 16px;
+      border: solid 1px #792f2f;
+      box-sizing: border-box;
+    }
+
+    .option:last-of-type{
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+
 </style>
