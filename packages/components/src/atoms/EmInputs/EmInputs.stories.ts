@@ -11,7 +11,7 @@ const meta = {
     },
     type: {
       control: 'select',
-        options: ['radio', 'checkbox', 'select', 'text', 'textarea', 'email', 'phone', 'file', 'date', 'time'],
+        options: ['checkbox', 'select', 'text', 'textarea', 'email', 'phone', 'file', 'date', 'time'],
     },
     label: {
       control: {
