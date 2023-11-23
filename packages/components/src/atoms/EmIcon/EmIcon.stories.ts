@@ -7,7 +7,7 @@ const meta = {
   argTypes: {
     src: {
       type: 'select',
-      options: ['play', 'calendar', 'cast', 'write', 'verified', 'money', 'checkmark', 'question', 'folder', 'translate', 'voice', 'message', 'phone', 'time', 'security', 'search', 'send', 'account', 'pin', 'rain', 'sun', 'validated', 'home', 'instagram', 'linkedin', 'youtube'],
+      options: ['arrowUp', 'arrowDown', 'play', 'calendar', 'cast', 'write', 'verified', 'money', 'checkmark', 'question', 'folder', 'translate', 'voice', 'message', 'phone', 'time', 'security', 'search', 'send', 'account', 'pin', 'rain', 'sun', 'validated', 'home', 'instagram', 'linkedin', 'youtube'],
     },
   },
 } satisfies Meta<typeof EmIcon>

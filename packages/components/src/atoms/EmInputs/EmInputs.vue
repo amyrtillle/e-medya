@@ -28,22 +28,25 @@ withDefaults(defineProps<InputProps & IconProps>(), {
   src : undefined,
 }, 
 )
+
+let selectIcon = 'arrowDown'
+
 const dropDown = ref(null)
 const isDropDownVisible = ref(false)
 const selectedOption = ref(null)
 const toggleOptionSelect = (option) => {
   selectedOption.value = option.text
   isDropDownVisible.value = false
+  selectIcon = 'arrowDown'
 }
 
 const mappedSelectedOption = computed(()=> {
   return (selectedOption.value?.text || selectedOption.value) || 'select an option'
 })
 
-const closeDropDown = (element) => {
-  if(!dropDown.value.contains(element.target)){
-    isDropDownVisible.value = false
-  }
+const toggleDropDown = () => {
+  isDropDownVisible.value = !isDropDownVisible.value
+  selectIcon = isDropDownVisible.value ? 'arrowUp' : 'arrowDown'
 }
 
 onMounted(()=> {
@@ -97,8 +100,9 @@ window.addEventListener('click',closeDropDown)
       </div>
     </div>
     <div class="dropdown-wrapper" ref="dropDown">
-      <div class="dropdown-selected-option" @click="isDropDownVisible = true">
+      <div class="dropdown-selected-option" @click="toggleDropDown()">
         <EmTextContent tag="span" class="typo-primary variant-tertiary s" :text="mappedSelectedOption" />
+        <EmIcon :src="selectIcon" />
       </div>
       <div class="options-wrapper" v-if="isDropDownVisible">
         <div class="option" v-for="option in options" :key="option.value" @click="toggleOptionSelect(option)">
