@@ -49,6 +49,13 @@ const toggleDropDown = () => {
   selectIcon = isDropDownVisible.value ? 'arrowUp' : 'arrowDown'
 }
 
+const closeDropDown = (element) => {
+  if(!dropDown.value.contains(element.target)){
+    isDropDownVisible.value = false
+    selectIcon = 'arrowDown'
+  }
+}
+
 onMounted(()=> {
  window.addEventListener('click',closeDropDown)
 })
