@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { InputProps, IconProps } from '../../types'
-import { EmTextContent, EmIcon } from '../../components';
+import { EmTextContent, EmIcon, EmButton } from '../../components';
 
 withDefaults(defineProps<InputProps & IconProps>(), {
   type: 'text',
@@ -34,10 +34,12 @@ let selectIcon = 'arrowDown'
 const dropDown = ref(null)
 const isDropDownVisible = ref(false)
 const selectedOption = ref(null)
+let isOpen = ''
 const toggleOptionSelect = (option) => {
   selectedOption.value = option.text
   isDropDownVisible.value = false
   selectIcon = 'arrowDown'
+  isOpen = ''
 }
 
 const mappedSelectedOption = computed(()=> {
@@ -47,12 +49,20 @@ const mappedSelectedOption = computed(()=> {
 const toggleDropDown = () => {
   isDropDownVisible.value = !isDropDownVisible.value
   selectIcon = isDropDownVisible.value ? 'arrowUp' : 'arrowDown'
+  if(isDropDownVisible.value){
+    isOpen = 'open'
+  }
+  else{
+    isOpen = ''
+  }
 }
+
 
 const closeDropDown = (element) => {
   if(!dropDown.value.contains(element.target)){
     isDropDownVisible.value = false
     selectIcon = 'arrowDown'
+    isOpen = ''
   }
 }
 
@@ -107,13 +117,13 @@ window.addEventListener('click',closeDropDown)
       </div>
     </div>
     <div class="dropdown-wrapper" ref="dropDown">
-      <div class="dropdown-selected-option" @click="toggleDropDown()">
+      <div class="dropdown-selected-option" :class="isOpen" @click="toggleDropDown()" ref="dropdDownWrap">
         <EmTextContent tag="span" class="typo-primary variant-tertiary s" :text="mappedSelectedOption" />
         <EmIcon :src="selectIcon" />
       </div>
       <div class="options-wrapper" v-if="isDropDownVisible">
         <div class="option" v-for="option in options" :key="option.value" @click="toggleOptionSelect(option)">
-          <EmTextContent tag="span" class="typo-primary variant-tertiary s" :text="option.text" />
+          <EmButton :label="option.text" href="" />
         </div>
       </div>
     </div>
@@ -231,28 +241,35 @@ window.addEventListener('click',closeDropDown)
     }
 
     .dropdown-wrapper{
-      padding: 16px;
       cursor: pointer;
-      max-width: 200px;
-      margin: 0 auto;
+      width: 100%;
     }
 
     .dropdown-selected-option{
-      border: solid 1px #792f2f;
-      border-radius: 8px;
+      border: solid 2px var(--em-color-purple-mountain-majesty);
+      display: flex;
+      border-radius: 5px;
       box-sizing: border-box;
-      margin-bottom: 4px;
-      padding: 16px;
+      padding: 5px;
+      justify-content: space-between;
     }
 
-    .option:hover{
-      background: #c5c5c5;
+    .dropdown-selected-option.open{
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border-bottom: none;
     }
 
-    .option{
-      padding: 16px;
-      border: solid 1px #792f2f;
+    .options-wrapper{
+      display: flex;
+      flex-direction: column;
+      border: solid 2px var(--em-color-purple-mountain-majesty);
+      border-top: none;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
       box-sizing: border-box;
+      overflow: hidden;
+      gap: var(--em-spacing-xs);
     }
 
     .option:last-of-type{
