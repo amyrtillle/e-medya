@@ -9,6 +9,7 @@ const props = defineProps<{
     text: string;
     icon: string;
   }[];
+  
 }>();
 </script>
 

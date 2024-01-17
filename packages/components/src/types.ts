@@ -32,7 +32,7 @@ export interface IconProps {
 export interface ImageProps {
   src: string
   alt?: string
-  variant?: Variant
+  imageVariant?: Variant
 }
 export interface InputProps {
   type: Input

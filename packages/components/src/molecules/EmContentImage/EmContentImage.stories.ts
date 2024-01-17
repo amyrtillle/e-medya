@@ -18,6 +18,13 @@ const meta = {
       type: 'select',
       options: ['primary', 'secondary', 'tertiary'],
     },
+
+    imageVariant: {
+
+      type: 'select',
+      options: ['primary', 'secondary', 'tertiary'],
+
+    }
   },
 } satisfies Meta<typeof EmContentImage>
 
@@ -28,6 +35,7 @@ export const Primary = {
 args: {
   src: 'https://picsum.photos/200/300',
   variant: 'primary',
+  imageVariant: 'primary',
   text: [
     'Un titre',
     'Un sous titre',
