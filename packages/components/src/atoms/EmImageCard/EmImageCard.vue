@@ -4,12 +4,12 @@ import type { ImageProps } from "../../types";
 withDefaults(defineProps<ImageProps>(), {
   src: "https://via.placeholder.com/1920",
   alt: "image",
-  variant: "primary"
+  imageVariant: "primary"
 });
 </script>
 
 <template>
-  <img :src="src" class="em-image-card" :class="{ [`variant-${variant}`]: true }" :alt="alt" />
+  <img :src="src" class="em-image-card" :class="{ [`variant-${imageVariant}`]: true }" :alt="alt" />
 </template>
 
 <style scoped>

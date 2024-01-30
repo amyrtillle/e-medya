@@ -8,7 +8,7 @@ const meta = {
     src: {
       control: 'text',
     },
-    variant: {
+    imageVariant: {
       type: 'select',
       options: ['primary', 'secondary', 'tertiary'],
     },
@@ -21,6 +21,6 @@ type Story = StoryObj<typeof meta>
 export const Primary = {
   args: {
     label: 'Contact',
-    variant: 'primary',
+    imageVariant: 'primary',
   },
 } satisfies Story

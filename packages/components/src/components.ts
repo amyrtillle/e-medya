@@ -19,6 +19,8 @@ export { default as EmImageCard } from './atoms/EmImageCard/EmImageCard.vue';
 export { default as EmContentImage } from './molecules/EmContentImage/EmContentImage.vue';
 export { default as EmNote } from './atoms/EmNote/EmNote.vue';
 export { default as EmInputs } from './atoms/EmInputs/EmInputs.vue';
-// COMPONENTS EXPORTS''''''''''''''''''''''''''''''
+export { default as EmServiceSection } from './organisms/EmServiceSection/EmServiceSection.vue';
+export { default as EmPortfolioSection } from './organisms/EmPortfolioSection/EmPortfolioSection.vue';
+// COMPONENTS EXPORTS''''''''''''''''''''''''''''''''
 
 export * from './types'

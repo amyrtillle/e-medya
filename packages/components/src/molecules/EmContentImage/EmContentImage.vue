@@ -6,6 +6,7 @@ withDefaults(defineProps<TextContentProps & ImageProps>(), {
   src: 'https://via.placeholder.com/1920',
   alt: 'image',
   variant: 'primary',
+  imageVariant: 'primary',
   text: [    
     'Title',
     'Content'
@@ -15,7 +16,7 @@ withDefaults(defineProps<TextContentProps & ImageProps>(), {
 
 <template >
   <div class="em-content-image" :class="{ [`variant-${variant}`]: true }" >
-      <EmImageCard :src="src" :alt="alt" variant="tertiary" />
+      <EmImageCard :src="src" :alt="alt" :imageVariant="imageVariant" />
       <div class="content">
         <EmTextContent tag="h3" typo="primary" variant="primary" size="l" :text="text[0]" />
         <EmTextContent tag="p" typo="secondary" variant="primary" size="s" :text="text[1]"/>
