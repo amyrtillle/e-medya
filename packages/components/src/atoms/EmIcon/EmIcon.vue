@@ -6,7 +6,7 @@ defineProps<IconProps>()
 
 <template>
   <div :class="{ [`i-em-${src}-icon`]: true }">
-    <img :src="`../../../static/${src}.svg`" :alt="`${src}-icon`">
+    <img :src="`assets/${src}.svg`" :alt="`${src}-icon`">
   </div>
 </template>
 

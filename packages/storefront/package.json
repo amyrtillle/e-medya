@@ -22,6 +22,7 @@
     "@nuxtjs/fontaine": "^0.4.0",
     "@testing-library/vue": "^7.0.0",
     "@unocss/nuxt": "^0.53.4",
+    "@vitejs/plugin-vue": "^4.2.3",
     "@vueuse/components": "^10.2.1",
     "@vueuse/core": "^10.2.1",
     "@vueuse/integrations": "^10.2.1",

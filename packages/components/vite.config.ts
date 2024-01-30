@@ -18,6 +18,9 @@ export default defineConfig({
       presets: [emPreset()],
     }),
   ],
+  optimizeDeps: {
+    include: ['vue'],
+  },
   test: {
     environment: 'jsdom',
   },
