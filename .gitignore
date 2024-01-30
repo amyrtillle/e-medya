@@ -40,3 +40,6 @@ packages/storefront/.output
 
 # proto
 .prototools
+
+#vscode
+.vscode/settings.json
