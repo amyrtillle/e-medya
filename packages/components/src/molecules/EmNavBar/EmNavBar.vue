@@ -3,7 +3,7 @@ import { EmButton, EmTextContent } from '../../components'
 </script>
 
 <template>
-  <nav class="nav">
+  <nav class="em-nav">
     <EmTextContent tag="a" size="m" href="./services" text="Services" />
     <EmTextContent tag="a" size="m" href="./productions" text="Productions" />
     <EmTextContent tag="a" size="m" href="./about" text="A propos" />
