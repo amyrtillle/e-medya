@@ -2,11 +2,11 @@
 </script>
 
 <template>
-  <hr class="header-separator">
+  <hr class="separator">
 </template>
 
 <style scoped>
-.header-separator{
+.separator{
   height: 100px;
   background-color: var(--em-color-dark-purple);
 }

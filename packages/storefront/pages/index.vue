@@ -49,7 +49,7 @@ const portfolioSection = {
   },
 }
 
-const active = ref(false)
+const menuActive = ref(false)
 </script>
 
 <template>
@@ -57,15 +57,19 @@ const active = ref(false)
     <header>
       <div class="nav">
         <img class="logo" src="../public/logo.svg" alt="E-Medya Web Logo">
-        <EmMenu v-model:active="active" />
-        <EmNavBar :class="{ active }" />
+        <EmMenu v-model:active="menuActive" />
+        <EmNavBar :class="{ menuActive }" />
       </div>
-      <EmTextContent text="E-Medya Web" tag="h1" typo="primary" />
-      <EmTextContent text="E-Medya Web" tag="h2" typo="secondary" />
-      <EmImageCard src="https://picsum.photos/200/300" alt="random image" />
-      <EmHeaderSeparator />
+      <div class="text-header">
+        <EmTextContent text="E-Medya Web" tag="h1" typo="primary" />
+        <EmTextContent text="E-Medya Web" tag="h2" typo="secondary" />
+      </div>
+      <div class="graphic-header">
+        <EmImageCard src="https://picsum.photos/200/300" alt="random image" />
+        <EmHeaderSeparator />
+      </div>
     </header>
-    <main>
+    <main :class="{ menuActive }">
       <EmServiceSection v-bind="serviceSection" />
       <EmButton label="Hizmetlerimiz" />
       <EmPortfolioSection
@@ -74,7 +78,7 @@ const active = ref(false)
       <EmTextSection />
       <EmButton label="Hakkımızda" />
     </main>
-    <footer>
+    <footer :class="{ menuActive }">
       <EmFooter />
     </footer>
   </div>
@@ -84,6 +88,9 @@ const active = ref(false)
 .layout {
   padding: var(--em-spacing-l);
   background-color: var(--em-color-white);
+  gap: var(--em-spacing-l);
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -105,11 +112,11 @@ header {
   background-color: var(--em-color-white);
 }
 
-.nav .em-nav:not(.active) {
+.nav .em-nav:not(.menuActive) {
   display: none;
 }
 
-.nav .em-nav.active{
+.nav .em-nav.menuActive{
   display: flex;
   position: absolute;
   margin-top: 70px;
@@ -126,5 +133,25 @@ header {
 .nav .menu{
   display: flex;
   align-items: center;;
+}
+
+.text-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--em-spacing-xl);
+}
+
+.graphic-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--em-spacing-xs);
+  width: 100%;
+}
+
+.graphic-header .separator {
+  width: 100%;
+  height: 50px;
 }
 </style>
