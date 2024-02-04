@@ -62,7 +62,7 @@ const menuActive = ref(false)
       </div>
       <div class="text-header">
         <EmTextContent text="E-Medya Web" tag="h1" typo="primary" />
-        <EmTextContent text="E-Medya Web" tag="h2" typo="secondary" />
+        <EmTextContent text="E-Medya Web" tag="p" typo="secondary" />
       </div>
       <div class="graphic-header">
         <EmImageCard src="https://picsum.photos/200/300" alt="random image" />
@@ -153,5 +153,24 @@ header {
 .graphic-header .separator {
   width: 100%;
   height: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  .nav .em-nav, .nav .em-nav:not(.menuActive) {
+  display: flex;
+  position: relative;
+}
+.nav .menu{
+  display: none;
+}
+
+.nav{
+  justify-content: space-between;
+}
+
+.nav .em-nav{
+  width: fit-content;
+}
+
 }
 </style>
