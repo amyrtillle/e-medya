@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { EmButton, EmFooter, EmHeaderSeparator, EmImageCard, EmMenu, EmNavBar, EmPortfolioSection, EmServiceSection, EmTextContent, EmTextSection } from '@e-medya-web/components'
+import { EmButton, EmPortfolioSection, EmServiceSection, EmTextSection } from '@e-medya-web/components'
 
 const serviceSection = {
   headline: 'Hizmetlerimiz',
@@ -48,30 +48,11 @@ const portfolioSection = {
     link: '#',
   },
 }
-
-const menuActive = ref(false)
 </script>
 
 <template>
   <div class="layout">
-    <header>
-      <div class="nav">
-        <a class="logo" href="/">
-          <img class="logo" src="../public/logo.svg" alt="E-Medya Web Logo">
-        </a>
-        <EmMenu v-model:active="menuActive" />
-        <EmNavBar :class="{ menuActive }" />
-      </div>
-      <div class="text-header">
-        <EmTextContent text="E-Medya Web" tag="h1" typo="primary" />
-        <EmTextContent text="E-Medya Web" tag="p" typo="secondary" />
-      </div>
-      <div class="graphic-header">
-        <EmImageCard src="https://picsum.photos/200/300" alt="random image" />
-        <EmHeaderSeparator />
-      </div>
-    </header>
-    <main :class="{ menuActive }">
+    <main>
       <EmServiceSection v-bind="serviceSection" />
       <EmButton label="Hizmetlerimiz" />
       <EmPortfolioSection
@@ -80,9 +61,6 @@ const menuActive = ref(false)
       <EmTextSection />
       <EmButton label="Hakkımızda" />
     </main>
-    <footer :class="{ menuActive }">
-      <EmFooter />
-    </footer>
   </div>
 </template>
 
@@ -115,17 +93,23 @@ header {
 }
 
 .nav .em-nav:not(.menuActive) {
-  display: none;
+  opacity: 0;
+  right: -100%;
+  margin-top: 70px;
+  transition: 0.5s ease-in-out;
+  width: 80%;
+  position: absolute;
 }
 
 .nav .em-nav.menuActive{
+  opacity: 1;
   display: flex;
   position: absolute;
   margin-top: 70px;
   right: 0;
   width: 80%;
+  transition: 0.5s ease-in-out;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
 }
 
 .nav .logo{
@@ -172,6 +156,15 @@ header {
 
 .nav .em-nav{
   width: fit-content;
+  left: 0;
+  opacity: 100%;
+  margin: 0;
+  justify-content: flex-end;
+  margin-top: 0;
+}
+
+.graphic-header .em-image-card{
+  aspect-ratio: 5/7;
 }
 
 }
