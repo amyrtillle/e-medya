@@ -53,16 +53,20 @@ const portfolioSection = {
 <template>
   <main>
     <EmServiceSection v-bind="serviceSection" />
-    <EmButton label="Hizmetlerimiz" />
+    <EmButton variant="secondary" label="Hizmetlerimiz" />
     <EmPortfolioSection
       v-bind="portfolioSection"
     />
     <EmTextSection />
-    <EmButton label="Hakkımızda" />
+    <EmButton variant="secondary" label="Hakkımızda" />
   </main>
 </template>
 
 <style scoped>
+.em-button{
+  margin: 50px 0
+}
+
 @media screen and (min-width: 1024px) {
 
 }

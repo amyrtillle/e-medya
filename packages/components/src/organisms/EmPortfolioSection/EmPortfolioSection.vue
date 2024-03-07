@@ -40,6 +40,10 @@ defineProps<{
   width: 100%;
 }
 
+.em-button{
+  margin: 25px 0
+}
+
 @media screen and (min-width: 768px) {
   .images {
     display: grid;
