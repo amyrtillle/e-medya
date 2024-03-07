@@ -33,7 +33,7 @@ const menuActive = ref(false)
 <style scoped>
 .layout {
   padding: var(--em-spacing-l);
-  background-color: var(--em-color-white);
+  background-color: #FFFFFF;
   gap: var(--em-spacing-l);
   display: flex;
   flex-direction: column;
@@ -55,7 +55,7 @@ header {
   left: 0;
   width: 100%;
   padding: var(--em-spacing-l);
-  background-color: var(--em-color-white);
+  background-color: #FFFFFF;
 }
 
 .nav .em-nav:not(.menuActive) {
