@@ -1,26 +1,26 @@
 <script setup lang="ts">
-import {EmSectionTitle, EmContentImage, EmButton} from "../../components";
+import { EmButton, EmContentImage, EmSectionTitle } from '../../components'
 
-const props = defineProps<{
-  headline: string;
-  title: string;
+defineProps<{
+  headline: string
+  title: string
   images: {
-    src: string;
-    alt: string;
-    text: Array<string>;
-  }[];
+    src: string
+    alt: string
+    text: Array<string>
+  }[]
   button: {
-    label: string;
-    link: string;
-  };
-}>();
+    label: string
+    link: string
+  }
+}>()
 </script>
 
 <template>
   <section class="portfolio-section">
     <EmSectionTitle class="section-title" :headline="headline" :title="title" />
     <div class="images">
-      <EmContentImage class="section-image" v-for="image in images" :key="image.text[0]" :src="image.src" :alt="image.alt" :text="image.text" />
+      <EmContentImage v-for="image in images" :key="image.text[0]" class="section-image" :src="image.src" :alt="image.alt" :text="image.text" />
     </div>
     <EmButton class="section-button" :link="button.link" :label="button.label" />
   </section>
@@ -58,5 +58,4 @@ const props = defineProps<{
     margin-top: -150px;
   }
 }
-
 </style>

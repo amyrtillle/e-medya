@@ -124,13 +124,13 @@ header {
   width: fit-content;
   left: 0;
   opacity: 100% !important;
-  margin: 0 !important;
+  margin: 0 !important ;
   justify-content: flex-end;
   margin-top: 0;
 }
 
 .graphic-header .em-image-card{
-  aspect-ratio: 5/7;
+  aspect-ratio: 32/9;
 }
 
 }
