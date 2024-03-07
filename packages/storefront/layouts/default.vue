@@ -107,7 +107,7 @@ header {
   height: 50px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .nav .em-nav, .nav .em-nav:not(.menuActive) {
   display: flex;
   position: relative;
@@ -123,8 +123,8 @@ header {
 .nav .em-nav{
   width: fit-content;
   left: 0;
-  opacity: 100%;
-  margin: 0;
+  opacity: 100% !important;
+  margin: 0 !important;
   justify-content: flex-end;
   margin-top: 0;
 }
