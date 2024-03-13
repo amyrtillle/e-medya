@@ -14,17 +14,19 @@ const serviceSection = {
   cards: [
     {
       title: 'Définition du besoin',
-      text: 'Nous prenons le temps de comprendre vos objectifs, votre vision et votre public. Nous discutons de vos idées, de vos attentes et de vos contraintes pour nous assurer que nous sommes tou.te.s sur la même longueur d’onde.',
+      texts: [
+        'Nous prenons le temps de comprendre vos objectifs, votre vision et votre public. Nous discutons de vos idées, de vos attentes et de vos contraintes pour nous assurer que nous sommes tou.te.s sur la même longueur d’onde.',
+      ],
       icon: 'phone',
     },
     {
       title: 'Créativité et conception',
-      text: 'Notre équipe se met ensuite au travail pour concevoir des idées originales et innovantes pour votre projet. Nous travaillons en étroire collaboration avec vous pour affiner la direction créative et trouver la solution la plus adaptée à vos besoins tout en restant en cohérence avec la plateforme et le public cible.',
+      texts: ['Notre équipe se met ensuite au travail pour concevoir des idées originales et innovantes pour votre projet. Nous travaillons en étroire collaboration avec vous pour affiner la direction créative et trouver la solution la plus adaptée à vos besoins tout en restant en cohérence avec la plateforme et le public cible.'],
       icon: 'play',
     },
     {
       title: 'Production et livraison',
-      text: 'Une fois que nous avons finsalié la direction créative et obtenu votre approbation, nous passons à la production. Nous travaillons avec des équipements professionnels et une équipe talentueuse pour capturer des images de qualité exceptionnelle, éditer et monter le contenu et livrer le produit final dans les délais impartis.',
+      texts: ['Une fois que nous avons finsalié la direction créative et obtenu votre approbation, nous passons à la production. Nous travaillons avec des équipements professionnels et une équipe talentueuse pour capturer des images de qualité exceptionnelle, éditer et monter le contenu et livrer le produit final dans les délais impartis.'],
       icon: 'checkmark',
     },
   ],

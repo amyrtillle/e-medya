@@ -1,25 +1,25 @@
 <script setup lang="ts">
 import { EmIcon, EmTextContent } from '../../components'
 
-const props = defineProps({
+const props = defineProps<{
   title: {
-    type: String,
-  },
-  text: {
-    type: String,
-  },
+    type: string
+  }
   icon: {
-    type: String,
-  },
+    type: string
+  }
+  texts: {
+    text: string
+  }[]
 
-})
+}>()
 </script>
 
 <template>
   <div class="service-card">
     <EmIcon :src="icon" />
     <EmTextContent :text="title" tag="h2" typo="secondary" />
-    <EmTextContent :text="text" tag="p" size="s" type="primary" />
+    <EmTextContent v-for="text in texts" :key="text" :text="text" tag="p" size="s" type="primary" />
   </div>
 </template>
 

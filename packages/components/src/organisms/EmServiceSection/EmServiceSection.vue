@@ -1,23 +1,25 @@
 <script setup lang="ts">
-import { EmServiceCard, EmSectionTitle } from "../../components";
+import { EmSectionTitle, EmServiceCard } from '../../components'
 
 const props = defineProps<{
-  headline: string;
-  title: string;
+  headline: string
+  title: string
   cards: {
-    title: string;
-    text: string;
-    icon: string;
-  }[];
-  
-}>();
+    title: string
+    texts: Array<{
+      text: string
+    }>
+    icon: string
+  }[]
+
+}>()
 </script>
 
 <template>
   <section class="service-section">
     <EmSectionTitle class="section-title" :headline="headline" :title="title" />
     <div class="cards">
-      <EmServiceCard class="section-card" v-for="card in cards" :key="card.title" :icon="card.icon" :text="card.text" :title="card.title"/>
+      <EmServiceCard v-for="card in cards" :key="card.title" class="section-card" :icon="card.icon" :texts="card.texts" :title="card.title" />
     </div>
   </section>
 </template>
@@ -42,6 +44,7 @@ const props = defineProps<{
 .section-card{
   width: 100%;
   height: 100%;
+  gap: var(--em-spacing-xl);
 }
 
 @media screen and (min-width: 768px) {
