@@ -4,7 +4,7 @@ import { EmSocialSection, EmTextContent } from '../../components'
 
 <template>
   <div class="sub-footer">
-    <EmTextContent size="s" typo="secondary" text="©2023 E-medya" />
+    <EmTextContent size="s" typo="secondary" text="©2024 E-medya" />
     <EmSocialSection />
   </div>
 </template>

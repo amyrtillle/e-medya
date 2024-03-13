@@ -14,7 +14,7 @@ const props = {
   <div class="social-section">
     <EmHeadLine text="RESEAUX" variant="secondary" />
     <div class="social-icons-container">
-      <a v-for="src in props.list" :href="`http://${src}.com/e-medya`" class="social-icons">
+      <a v-for="src in props.list" :href="`http://${src}.e-medya.fr`" class="social-icons">
         <EmIcon
           :src="src"
           :class="src"
