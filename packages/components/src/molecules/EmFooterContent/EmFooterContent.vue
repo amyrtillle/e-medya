@@ -13,8 +13,8 @@ import EmTextContent from '../../atoms/EmTextContent/EmTextContent.vue'
     </div>
     <div class="contact">
       <div class="adress">
-        <EmTextContent tag="span" text="2 Impasse des platanes, " />
-        <EmTextContent tag="span" text="38210 Saint-Quentin-sur-Isère" />
+        <EmTextContent tag="span" text="42B rue ampère, " />
+        <EmTextContent tag="span" text="38000 Grenoble" />
       </div>
       <div class="mail">
         <EmTextContent tag="span" text="Envoyez nous un mail à " />
