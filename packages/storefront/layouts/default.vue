@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { EmFooter, EmHeaderSeparator, EmImageCard, EmMenu, EmNavBar, EmTextContent } from '@e-medya-web/components'
+import { EmFooter, EmMenu, EmNavBar } from '@e-medya-web/components'
 
 const menuActive = ref(false)
 </script>
@@ -13,14 +13,6 @@ const menuActive = ref(false)
         </a>
         <EmMenu v-model:active="menuActive" />
         <EmNavBar :class="{ menuActive }" />
-      </div>
-      <div class="text-header">
-        <EmTextContent text="E-Medya Web" tag="h1" typo="primary" />
-        <EmTextContent text="E-Medya Web" tag="p" typo="secondary" />
-      </div>
-      <div class="graphic-header">
-        <EmImageCard src="https://picsum.photos/200/300" alt="random image" />
-        <EmHeaderSeparator />
       </div>
     </header>
     <slot />
@@ -87,26 +79,6 @@ header {
   align-items: center;;
 }
 
-.text-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--em-spacing-xl);
-}
-
-.graphic-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--em-spacing-xs);
-  width: 100%;
-}
-
-.graphic-header .separator {
-  width: 100%;
-  height: 50px;
-}
-
 @media screen and (min-width: 1024px) {
   .nav .em-nav, .nav .em-nav:not(.menuActive) {
   display: flex;
@@ -128,10 +100,5 @@ header {
   justify-content: flex-end;
   margin-top: 0;
 }
-
-.graphic-header .em-image-card{
-  aspect-ratio: 32/9;
-}
-
 }
 </style>

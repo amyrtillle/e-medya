@@ -1,5 +1,12 @@
 <script setup lang="ts">
-import { EmButton, EmPortfolioSection, EmServiceSection, EmTextSection } from '@e-medya-web/components'
+import { EmButton, EmHeaderSeparator, EmImageCard, EmPortfolioSection, EmServiceSection, EmTextContent, EmTextSection } from '@e-medya-web/components'
+
+const header = {
+  title: 'E-Medya Web',
+  desc: 'Web siteniz için en iyi hizmeti sunarız.',
+  img: 'https://picsum.photos/200/300',
+  alt: 'random image',
+}
 
 const serviceSection = {
   headline: 'Hizmetlerimiz',
@@ -51,6 +58,14 @@ const portfolioSection = {
 </script>
 
 <template>
+  <div class="text-header">
+    <EmTextContent :text="header.title" tag="h1" typo="primary" />
+    <EmTextContent :text="header.desc" tag="p" typo="secondary" />
+  </div>
+  <div class="graphic-header">
+    <EmImageCard :src="header.img" :alt="header.alt" />
+    <EmHeaderSeparator />
+  </div>
   <main>
     <EmServiceSection v-bind="serviceSection" />
     <EmButton variant="secondary" label="Hizmetlerimiz" />
@@ -67,7 +82,30 @@ const portfolioSection = {
   margin: 50px 0
 }
 
+.graphic-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--em-spacing-xs);
+  width: 100%;
+}
+
+.graphic-header .separator {
+  width: 100%;
+  height: 50px;
+}
+
+.text-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--em-spacing-xl);
+}
+
 @media screen and (min-width: 1024px) {
+  .graphic-header .em-image-card{
+  aspect-ratio: 32/9;
+}
 
 }
 </style>
