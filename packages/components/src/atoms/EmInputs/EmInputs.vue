@@ -333,6 +333,7 @@ onBeforeUnmount(() => {
 textarea {
   resize: vertical;
   min-height: 100px;
+  height: 100%;
 }
 
 textarea::placeholder,

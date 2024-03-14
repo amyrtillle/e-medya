@@ -173,6 +173,12 @@ const form = {
               type: 'text',
               placeholder: 'Clip / pub / interview / bestOf / autre',
             },
+            {
+              id: 'typeDetails',
+              label: 'Si autre type, veuillez le préciser dans l’encart ci-dessous.',
+              type: 'text',
+              placeholder: 'Précisez ....',
+            },
           ],
           subject: [
             {
@@ -451,8 +457,6 @@ const form = {
     },
   ],
 }
-
-console.log(form.fields[1].budget)
 </script>
 
 <template>
@@ -472,11 +476,13 @@ console.log(form.fields[1].budget)
         <div class="legal">
           <EmInputs v-for="field in form.fields[0].general[0].legal" :key="field.id" :name="field.id" :type="field.type" :label="field.label" :required="field.required" :placeholder="field.placeholder" :src="field.img" :options="field.options" />
         </div>
-        <div class="tournage">
-          <EmInputs v-for="field in form.fields[0].general[0].tournage" :key="field.id" :name="field.id" :type="field.type" :label="field.label" :required="field.required" :placeholder="field.placeholder" :src="field.img" :options="field.options" />
-        </div>
-        <div class="subject">
-          <EmInputs v-for="field in form.fields[0].general[0].subject" :key="field.id" :name="field.id" :type="field.type" :label="field.label" :required="field.required" :placeholder="field.placeholder" :src="field.img" :options="field.options" />
+        <div class="tournage-subject">
+          <div class="tournage">
+            <EmInputs v-for="field in form.fields[0].general[0].tournage" :key="field.id" :name="field.id" :type="field.type" :label="field.label" :required="field.required" :placeholder="field.placeholder" :src="field.img" :options="field.options" />
+          </div>
+          <div class="subject">
+            <EmInputs v-for="field in form.fields[0].general[0].subject" :key="field.id" :name="field.id" :type="field.type" :label="field.label" :required="field.required" :placeholder="field.placeholder" :src="field.img" :options="field.options" />
+          </div>
         </div>
       </div>
       <EmTextContent :text="form.secondTitle" tag="h2" typo="secondary" variant="tertiary" />
@@ -487,6 +493,10 @@ console.log(form.fields[1].budget)
         <EmInputs v-for="field in form.fields[1].budget" :key="field.id" :name="field.id" :type="field.type" :label="field.label" :required="field.required" :placeholder="field.placeholder" :src="field.img" :options="field.options" />
       </div>
       <div class="submit">
+        <a href="/cgu">
+
+          <EmInputs type="checkbox" name="cgu" label="J'accepte les conditions générales d’utilisations." required />
+        </a>
         <EmButton
           onclick="document.getElementById('contact_form').submit(); " link="javascript:{}"
           label="Envoyer"
@@ -538,16 +548,80 @@ main,
     .graphic-header .em-image-card {
         aspect-ratio: 32/9;
     }
-
-    form>div {
+    form {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
     }
 
-    form>div>* {
-        flex: 0 0 33.333333%;
-        padding: 0 var(--em-spacing-s);
-
+    .text-content{
+        margin: var(--em-spacing-3xl) 0 0 0;
     }
+
+    .general-informations {
+        display: flex;
+        flex-direction: column;
+        gap: 20px; /* Added gap between sections */
+    }
+
+    .legal {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+        gap: var(--em-spacing-m);
+    }
+
+    .tournage,
+    .subject {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+        gap: var(--em-spacing-m);
+    }
+
+    .tournage-subject{
+        display: flex;
+        gap: var(--em-spacing-4xl);
+        flex-direction: row;
+    }
+
+    .subject {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.subject .em-input:has(textarea){
+    height: 100%;
+}
+
+.production-informations {
+    display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 2 items per row */
+        gap: var(--em-spacing-m);
+}
+
+.misc-informations {
+    margin: var(--em-spacing-4xl) 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--em-spacing-m);
+    align-items: center;
+}
+
+.submit{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+justify-content: center;
+gap: var(--em-spacing-m);
+}
+.submit a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.submit .em-button{
+  width: fit-content;
+  margin: auto;
+}
 }
 </style>
