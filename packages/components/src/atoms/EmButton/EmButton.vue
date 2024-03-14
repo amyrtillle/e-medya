@@ -49,4 +49,16 @@ a{
 .variant-secondary:hover{
   background-color: var(--em-color-dark-purple);
 }
+
+.variant-inputs{
+  color: var(--em-color-super-pink);
+  background-color: var(--em-color-white);
+  font-size: var(--em-typography-font-size-s);
+  padding: var(--em-spacing-xs) var(--em-spacing-m);
+}
+
+.variant-inputs:hover{
+  background-color: var(--em-color-black);
+  color: var(--em-color-libery);
+}
 </style>
