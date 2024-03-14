@@ -9,7 +9,7 @@ withDefaults(defineProps<ButtonProps>(), {
 
 <template>
   <div class="em-button">
-    <a :class="{ [`variant-${variant}`]: true }" :href="link">{{ label }}</a>
+    <a :class="{ [`variant-${variant}`]: true }" :type="type" :href="link">{{ label }}</a>
   </div>
 </template>
 
