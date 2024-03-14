@@ -34,7 +34,7 @@ const form = {
       img: 'verified',
       type: 'text',
       required: false,
-      placeholder: 'E-medya (si vous êtes un particulier, laissez ce champ vide)',
+      placeholder: 'E-medya (particuliers, laissez ce champ vide)',
     },
     {
       id: 'email',
@@ -108,9 +108,11 @@ const form = {
       method="POST"
       enctype="multipart/form-data"
     >
-      <EmInputs v-for="field in form.fields" :key="field.id" :name="field.id" :type="field.type" :label="field.label" :required="field.required" :placeholder="field.placeholder" :src="field.img" :options="field.options" />
+      <div>
+        <EmInputs v-for="field in form.fields" :key="field.id" :name="field.id" :type="field.type" :label="field.label" :required="field.required" :placeholder="field.placeholder" :src="field.img" :options="field.options" />
+      </div>
 
-      <EmButton onclick="document.getElementById('contact_form').submit(); " link="javascript:{}" label="Send" />
+      <EmButton onclick="document.getElementById('contact_form').submit(); " link="javascript:{}" label="Envoyer" />
     </form>
   </main>
 </template>
@@ -120,7 +122,8 @@ main, .graphic-header{
     text-align: center;
 }
 .em-button{
-  margin: 50px 0
+  margin: 50px 0;
+  justify-content: center;
 }
 
 .graphic-header {
@@ -155,5 +158,15 @@ main, .graphic-header{
   aspect-ratio: 32/9;
 }
 
+form > div {
+    display: flex;
+  flex-wrap: wrap;
+}
+
+form > div > *{
+    flex: 0 0 33.333333%;
+    padding: 0 var(--em-spacing-s);
+
+}
 }
 </style>

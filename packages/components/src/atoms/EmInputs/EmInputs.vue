@@ -148,6 +148,7 @@ onBeforeUnmount(() => {
   display: flex;
   flex-direction: column;
   gap: var(--em-spacing-xs);
+  justify-content: center;
 }
 
 .em-checkbox{
