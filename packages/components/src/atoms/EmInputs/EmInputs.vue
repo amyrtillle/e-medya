@@ -75,7 +75,21 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div v-if="type != 'select' && type != 'checkbox'" class="em-input">
+  <div v-if="type == 'textarea'" class="em-input">
+    <div class="content">
+      <!-- icon -->
+      <EmIcon v-if="src" :src="src" />
+
+      <div class="label">
+        <EmTextContent v-if="label" tag="label" class="typo-primary variant-tertiary s bold" :for="name" :text="label" />
+        <EmTextContent v-if="required" :id="name" tag="span" class="typo-primary variant-secondary s" text="*" />
+      </div>
+    </div>
+
+    <!-- input -->
+    <textarea :id="name" class="input" :aria-label="ariaLabel" :class="type" :placeholder="placeholder" :name="label" :required="required" />
+  </div>
+  <div v-else-if="type != 'select' && type != 'checkbox'" class="em-input">
     <div class="content">
       <!-- icon -->
       <EmIcon v-if="src" :src="src" />
@@ -272,4 +286,12 @@ onBeforeUnmount(() => {
       border-bottom-left-radius: 8px;
       border-bottom-right-radius: 8px;
     }
+
+    textarea{
+      resize: vertical;
+      min-height: 100px;
+    }
+    textarea::placeholder, input::placeholder{
+      font-family: var(--em-typography-font-family-secondary);
+}
 </style>
