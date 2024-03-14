@@ -32,7 +32,9 @@ const menuActive = ref(false)
 }
 
 header {
+  z-index: 1000;
   margin-top: 80px;
+  flex: 10;
   display: flex;
   flex-direction: column;
   align-items: center;
