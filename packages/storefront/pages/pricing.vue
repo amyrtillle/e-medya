@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { EmHeaderSeparator, EmTextContent } from '@e-medya-web/components'
+import { EmHeaderSeparator, EmInputs, EmTextContent } from '@e-medya-web/components'
 import EmButton from '@e-medya-web/components/src/atoms/EmButton/EmButton.vue'
 
 const header = {
@@ -80,14 +80,14 @@ const form = {
             {
               id: 'location',
               label: 'Lieu de tournage',
-              img: 'location',
+              img: 'pin',
               type: 'text',
               required: true,
               placeholder: 'Lieu désiré du tournage',
             },
             {
               id: 'multipleLocations',
-              label: 'Si plusieurs ieux de tournages souhaités, merci de les préciser dans l’encart ci-dssous',
+              label: 'Si plusieurs lieux de tournages souhaités, merci de les préciser dans l’encart ci-dssous',
               placholder: 'Lieu 1, Lieu 2, ...',
               type: 'text',
             },
@@ -108,7 +108,7 @@ const form = {
             {
               id: 'context',
               label: 'Sitation',
-              img: 'weather',
+              img: 'rain',
               required: true,
               type: 'select',
               options: [
@@ -271,7 +271,7 @@ const form = {
             {
               id: 'recordDuration',
               label: 'Durée du tournage',
-              img: 'clock',
+              img: 'time',
               required: true,
               type: 'text',
               placeholder: 'Durée en heures ou en jours',
@@ -305,7 +305,7 @@ const form = {
               id: 'scenarioFile',
               label: 'Si oui, merci de le joindre ici',
               type: 'file',
-              img: 'file',
+              img: 'folder',
             },
             {
               id: 'voiceNeeded',
@@ -341,7 +341,7 @@ const form = {
             {
               id: 'subtitles',
               label: 'Sous-titres nécessaires ?',
-              img: 'text',
+              img: 'message',
               required: true,
               type: 'select',
               options: [
@@ -406,7 +406,7 @@ const form = {
             {
               id: 'visualIdentityFile',
               label: 'Si oui, veuillez la mettre en pièce jointe',
-              type: 'file',
+              type: 'folder',
             },
           ],
         },
@@ -451,6 +451,8 @@ const form = {
     },
   ],
 }
+
+console.log(form.fields[1].budget)
 </script>
 
 <template>
@@ -463,27 +465,32 @@ const form = {
     <EmTextContent :text="header.secondDesc" tag="p" typo="secondary" />
   </div>
   <main>
-    <form id="contact_form" action="https://formspree.io/f/mdoqdjgv" method="POST" enctype="multipart/form-data">
+    <form id="contact_form" action="https://formspree.io/f/xkndzlry" method="POST" enctype="multipart/form-data">
       <EmTextContent :text="form.title" tag="h2" typo="secondary" variant="tertiary" />
       <EmTextContent :text="form.subTitle" tag="p" typo="secondary" variant="tertiary" />
-      <div class="general-informations" />
+      <div class="general-informations">
+        <div class="legal">
+          <EmInputs v-for="field in form.fields[0].general[0].legal" :key="field.id" :name="field.id" :type="field.type" :label="field.label" :required="field.required" :placeholder="field.placeholder" :src="field.img" :options="field.options" />
+        </div>
+        <div class="tournage">
+          <EmInputs v-for="field in form.fields[0].general[0].tournage" :key="field.id" :name="field.id" :type="field.type" :label="field.label" :required="field.required" :placeholder="field.placeholder" :src="field.img" :options="field.options" />
+        </div>
+        <div class="subject">
+          <EmInputs v-for="field in form.fields[0].general[0].subject" :key="field.id" :name="field.id" :type="field.type" :label="field.label" :required="field.required" :placeholder="field.placeholder" :src="field.img" :options="field.options" />
+        </div>
+      </div>
       <EmTextContent :text="form.secondTitle" tag="h2" typo="secondary" variant="tertiary" />
-      <div class="production-informations" />
-      <div class="misc-informations" />
+      <div class="production-informations">
+        <EmInputs v-for="field in form.fields[0].production[0].general" :key="field.id" :name="field.id" :type="field.type" :label="field.label" :required="field.required" :placeholder="field.placeholder" :src="field.img" :options="field.options" />
+      </div>
+      <div class="misc-informations">
+        <EmInputs v-for="field in form.fields[1].budget" :key="field.id" :name="field.id" :type="field.type" :label="field.label" :required="field.required" :placeholder="field.placeholder" :src="field.img" :options="field.options" />
+      </div>
       <div class="submit">
         <EmButton
           onclick="document.getElementById('contact_form').submit(); " link="javascript:{}"
           label="Envoyer"
         />
-      </div>
-      <!-- <div>
-        <EmInputs
-          v-for="field in form.fields" :key="field.id" :name="field.id" :type="field.type"
-          :label="field.label" :required="field.required" :placeholder="field.placeholder" :src="field.img"
-          :options="field.options"
-        />
-      </div> -->
-      </eminputs>
       </div>
     </form>
   </main>

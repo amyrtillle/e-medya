@@ -27,7 +27,7 @@ export interface ButtonProps {
 }
 
 export interface IconProps {
-  src: Icon
+  src?: Icon
 }
 
 export interface ImageProps {
