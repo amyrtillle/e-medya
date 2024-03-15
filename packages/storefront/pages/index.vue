@@ -4,8 +4,8 @@ import { EmButton, EmHeaderSeparator, EmImageCard, EmPortfolioSection, EmService
 const header = {
   title: 'Donnez vie à vos idées',
   desc: 'Nous travaillons en étroite collaboration avec nos clients pour donner vie à leurs idées, en créant des clips, des reportages et des publicités qui reflètent leur vision et leur identité.',
-  img: 'https://picsum.photos/200/300',
-  alt: 'random image',
+  img: '/assets/home-camera.jpg',
+  alt: 'camera image',
 }
 
 const serviceSection = {
@@ -37,19 +37,22 @@ const portfolioSection = {
   title: 'Le fruit de notre passion pour la vidéo',
   images: [
     {
-      src: 'https://picsum.photos/200/300',
+      src: '/assets/brasero-photo.png',
       alt: 'random image',
       text: ['Brasero HomeMade', 'Vidéo de présentation des Braseros homemade sur demande et personnalisable par la société artisanale Made of Wood'],
+      link: 'https://www.facebook.com/MadeOfWood38/videos/1878606152520042',
     },
     {
-      src: 'https://picsum.photos/200/300',
+      src: '/assets/baladecontee.webp',
       alt: 'random image',
       text: ['Laissez-vous emporter par la magie de leurs contées', 'Anim’Aventure propose des balades contées dans de magnifiques paysages naturels pour les plus petits comme les plus grands.'],
+      link: 'https://youtu.be/Mt4ah74jMtk',
     },
     {
-      src: 'https://picsum.photos/200/300',
+      src: '/assets/escape_photo.webp',
       alt: 'random image',
       text: ['Anim’Aventure propose des balades contées dans de magnifiques paysages naturels pour les plus petits comme les plus grands.', 'Anim’Aventure propose des balades contées dans de magnifiques paysages naturels pour les plus petits comme les plus grands.'],
+      link: 'https://youtu.be/XlpTsXUYldM',
     },
   ],
   button: {

@@ -34,6 +34,7 @@ export interface ImageProps {
   src: string
   alt?: string
   imageVariant?: Variant
+  link?: string
 }
 export interface InputProps {
   type: Input

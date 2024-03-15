@@ -8,6 +8,7 @@ defineProps<{
     src: string
     alt: string
     text: Array<string>
+    link: string
   }[]
   button: {
     label: string
@@ -20,7 +21,7 @@ defineProps<{
   <section class="portfolio-section">
     <EmSectionTitle class="section-title" :headline="headline" :title="title" />
     <div class="images">
-      <EmContentImage v-for="image in images" :key="image.text[0]" class="section-image" :src="image.src" :alt="image.alt" :text="image.text" />
+      <EmContentImage v-for="image in images" :key="image.text[0]" class="section-image" :src="image.src" :href="image.link" :alt="image.alt" :text="image.text" />
     </div>
     <EmButton class="section-button" :link="button.link" :label="button.label" />
   </section>

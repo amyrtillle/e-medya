@@ -4,8 +4,8 @@ import { EmHeaderSeparator, EmImageCard, EmNote, EmServiceSection, EmTextContent
 const header = {
   title: 'Nos services',
   desc: 'Nous proposons plusieurs types de prestations, que ce soit de la prise de vue simple pour vos projets, uniquement le montage vidéo ou la prise en charge complète de vos projets, nous serons là pour vous accompagner du début à la fin.',
-  img: 'https://picsum.photos/200/300',
-  alt: 'random image',
+  img: '/assets/services-clap.jpg',
+  alt: 'clap image',
 }
 
 const serviceSection = {

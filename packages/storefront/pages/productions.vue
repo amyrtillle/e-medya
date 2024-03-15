@@ -5,8 +5,8 @@ const header = {
   title: 'Nos productions',
   desc: 'Vous souhaitez avoir un aperçu de nos productions avant de vous lancer dans une aventure avec nous ?',
   descBis: 'Vous êtes au bon endroit ! Dans cette section vous trouverez des exemples de nos productions, allant du trailer, à la pub de pour la vente de produit, en passant par le clip vidéo, vous en aurez pour tous les goûts !',
-  img: 'https://picsum.photos/200/300',
-  alt: 'random image',
+  img: '/assets/productions-tournage.png',
+  alt: 'tournage image fond vert',
 }
 
 const portfolioSection = {
@@ -14,19 +14,22 @@ const portfolioSection = {
   title: 'Retrouvez toutes nos productions ici',
   images: [
     {
-      src: 'https://picsum.photos/200/300',
+      src: '/assets/brasero-photo.png',
       alt: 'random image',
       text: ['Brasero Artisanal', 'Nous sommes fièr.e.s de vous présenter notre vidéo publicitaire pour Made of Wood, une entreprise artisanale dans le secteur de la fabrication de meubles, agencement, pose de menuiserie qui crée aussi des braseros sur mesure, faits à la main avec passion et expertise. Notre vidéo capture l’essence de leur processus de création et de leur engagement envers des produits de qualité supérieur.'],
+      link: 'https://www.facebook.com/MadeOfWood38/videos/1878606152520042',
     },
     {
-      src: 'https://picsum.photos/200/300',
+      src: '/assets/baladecontee.webp',
       alt: 'random image',
       text: ['Ballades contées, entre magie et nature', 'Dans ce trailer d’1 minute, vous pourrez découvrir les balades contées made by Anim’aventures, un mélange entre balade en nature et immersion dans un univers magique.'],
+      link: 'https://youtu.be/Mt4ah74jMtk',
     },
     {
-      src: 'https://picsum.photos/200/300',
+      src: '/assets/escape_photo.webp',
       alt: 'random image',
       text: ['Escapes Games à domicile', 'Dans ce trailer d’1 minute, vous pourrez découvrir les escapes games sur mesures made by Anim’aventures, disponbles dans plusieurs univers différents, et accessibles aux plus jeunes.'],
+      link: 'https://youtu.be/XlpTsXUYldM',
     },
   ],
   button: {
