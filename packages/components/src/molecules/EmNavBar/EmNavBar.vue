@@ -4,11 +4,11 @@ import { EmButton, EmTextContent } from '../../components'
 
 <template>
   <nav class="em-nav">
-    <EmTextContent tag="a" size="m" href="./services" text="Services" />
-    <EmTextContent tag="a" size="m" href="./productions" text="Productions" />
-    <EmTextContent tag="a" size="m" href="./about" text="A propos" />
-    <EmButton href="./contact" label="Contact" />
-    <EmButton href="./devis" variant="secondary" label="Demander un devis" />
+    <EmTextContent tag="a" size="m" href="/services" text="Services" />
+    <EmTextContent tag="a" size="m" href="/productions" text="Productions" />
+    <EmTextContent tag="a" size="m" href="/about" text="A propos" />
+    <EmButton link="/contact" label="Contact" />
+    <EmButton link="/pricing" variant="secondary" label="Demander un devis" />
   </nav>
 </template>
 
@@ -34,7 +34,7 @@ a{
   font-weight: var(--em-typography-font-weight-semibold);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
 nav{
   background-color: transparent;
   gap: 40px;
