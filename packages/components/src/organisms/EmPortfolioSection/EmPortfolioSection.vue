@@ -32,6 +32,7 @@ defineProps<{
   display: flex;
   flex-direction: column;
   gap: var(--em-spacing-l);
+  margin-bottom: var(--em-spacing-3xl);
 }
 
 .images {
