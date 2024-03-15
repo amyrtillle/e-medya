@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { EmHeaderSeparator, EmInputs, EmTextContent } from '@e-medya-web/components'
-import EmButton from '@e-medya-web/components/src/atoms/EmButton/EmButton.vue'
 
 const header = {
   title: 'Demander un devis',
@@ -27,7 +26,7 @@ const form = {
             },
             {
               id: 'name',
-              label: 'nom',
+              label: 'Nom',
               img: 'account',
               type: 'text',
               required: true,
@@ -183,7 +182,7 @@ const form = {
           subject: [
             {
               id: 'subject',
-              label: 'sujet',
+              label: 'Sujet',
               img: 'search',
               required: true,
               type: 'text',
@@ -412,7 +411,8 @@ const form = {
             {
               id: 'visualIdentityFile',
               label: 'Si oui, veuillez la mettre en pièce jointe',
-              type: 'folder',
+              type: 'file',
+              img: 'folder',
             },
           ],
         },
@@ -493,14 +493,10 @@ const form = {
         <EmInputs v-for="field in form.fields[1].budget" :key="field.id" :name="field.id" :type="field.type" :label="field.label" :required="field.required" :placeholder="field.placeholder" :src="field.img" :options="field.options" />
       </div>
       <div class="submit">
-        <a href="/cgu">
-
-          <EmInputs type="checkbox" name="cgu" label="J'accepte les conditions générales d’utilisations." required />
+        <a href="/cgu.pdf">
+          <EmInputs type="checkbox" name="cgu" label="J'accepte les conditions générales d’utilisations." required="true" />
         </a>
-        <EmButton
-          onclick="document.getElementById('contact_form').submit(); " link="javascript:{}"
-          label="Envoyer"
-        />
+        <EmInputs type="submit" label="Envoyer" class="send-form" />
       </div>
     </form>
   </main>
@@ -544,6 +540,9 @@ main,
     margin: var(--em-spacing-l) 0;
 }
 
+.send-form{
+  padding: 0;
+}
 @media screen and (min-width: 1024px) {
     .graphic-header .em-image-card {
         aspect-ratio: 32/9;
@@ -622,6 +621,9 @@ gap: var(--em-spacing-m);
 .submit .em-button{
   width: fit-content;
   margin: auto;
+}
+.send-form{
+  padding: 0;
 }
 }
 </style>

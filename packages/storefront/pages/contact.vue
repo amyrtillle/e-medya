@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { EmHeaderSeparator, EmInputs, EmTextContent } from '@e-medya-web/components'
-import EmButton from '@e-medya-web/components/src/atoms/EmButton/EmButton.vue'
 
 const header = {
   title: 'Nous contacter',
@@ -112,7 +111,7 @@ const form = {
         <EmInputs v-for="field in form.fields" :key="field.id" :name="field.id" :type="field.type" :label="field.label" :required="field.required" :placeholder="field.placeholder" :src="field.img" :options="field.options" />
       </div>
 
-      <EmButton onclick="document.getElementById('contact_form').submit(); " link="javascript:{}" label="Envoyer" />
+      <EmInputs type="submit" label="Envoyer" class="send-form" />
     </form>
   </main>
 </template>

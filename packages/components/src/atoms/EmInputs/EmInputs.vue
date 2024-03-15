@@ -75,7 +75,10 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div v-if="type == 'textarea'" class="em-input">
+  <div v-if="type == 'submit'" class="content">
+    <input type="submit" :name="label" :value="label" class="input">
+  </div>
+  <div v-else-if="type == 'textarea'" class="em-input">
     <div class="content">
       <!-- icon -->
       <EmIcon v-if="src" :src="src" />
@@ -339,5 +342,11 @@ textarea {
 textarea::placeholder,
 input::placeholder {
   font-family: var(--em-typography-font-family-secondary);
+}
+
+.input[type='submit'] {
+  width: fit-content;
+  padding: var(--em-spacing-xs) var(--em-spacing-m);
+  margin: auto;
 }
 </style>
