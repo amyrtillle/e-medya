@@ -474,27 +474,50 @@ const form = {
       <EmTextContent :text="form.subTitle" tag="p" typo="secondary" variant="tertiary" />
       <div class="general-informations">
         <div class="legal">
-          <EmInputs v-for="field in form.fields[0].general[0].legal" :key="field.id" :name="field.id" :type="field.type" :label="field.label" :required="field.required" :placeholder="field.placeholder" :src="field.img" :options="field.options" />
+          <EmInputs
+            v-for="field in form.fields[0].general[0].legal" :key="field.id" :name="field.id" :type="field.type"
+            :label="field.label" :required="field.required" :placeholder="field.placeholder" :src="field.img"
+            :options="field.options"
+          />
         </div>
         <div class="tournage-subject">
           <div class="tournage">
-            <EmInputs v-for="field in form.fields[0].general[0].tournage" :key="field.id" :name="field.id" :type="field.type" :label="field.label" :required="field.required" :placeholder="field.placeholder" :src="field.img" :options="field.options" />
+            <EmInputs
+              v-for="field in form.fields[0].general[0].tournage" :key="field.id" :name="field.id"
+              :type="field.type" :label="field.label" :required="field.required" :placeholder="field.placeholder"
+              :src="field.img" :options="field.options"
+            />
           </div>
           <div class="subject">
-            <EmInputs v-for="field in form.fields[0].general[0].subject" :key="field.id" :name="field.id" :type="field.type" :label="field.label" :required="field.required" :placeholder="field.placeholder" :src="field.img" :options="field.options" />
+            <EmInputs
+              v-for="field in form.fields[0].general[0].subject" :key="field.id" :name="field.id"
+              :type="field.type" :label="field.label" :required="field.required" :placeholder="field.placeholder"
+              :src="field.img" :options="field.options"
+            />
           </div>
         </div>
       </div>
       <EmTextContent :text="form.secondTitle" tag="h2" typo="secondary" variant="tertiary" />
       <div class="production-informations">
-        <EmInputs v-for="field in form.fields[0].production[0].general" :key="field.id" :name="field.id" :type="field.type" :label="field.label" :required="field.required" :placeholder="field.placeholder" :src="field.img" :options="field.options" />
+        <EmInputs
+          v-for="field in form.fields[0].production[0].general" :key="field.id" :name="field.id"
+          :type="field.type" :label="field.label" :required="field.required" :placeholder="field.placeholder"
+          :src="field.img" :options="field.options"
+        />
       </div>
       <div class="misc-informations">
-        <EmInputs v-for="field in form.fields[1].budget" :key="field.id" :name="field.id" :type="field.type" :label="field.label" :required="field.required" :placeholder="field.placeholder" :src="field.img" :options="field.options" />
+        <EmInputs
+          v-for="field in form.fields[1].budget" :key="field.id" :name="field.id" :type="field.type"
+          :label="field.label" :required="field.required" :placeholder="field.placeholder" :src="field.img"
+          :options="field.options"
+        />
       </div>
       <div class="submit">
         <a href="/cgu.pdf">
-          <EmInputs type="checkbox" name="cgu" label="J'accepte les conditions générales d’utilisations." required="true" />
+          <EmInputs
+            type="checkbox" name="cgu" label="J'accepte les conditions générales d’utilisations."
+            required="true"
+          />
         </a>
         <EmInputs type="submit" label="Envoyer" class="send-form" />
       </div>
@@ -505,125 +528,134 @@ const form = {
 <style scoped>
 main,
 .graphic-header {
-    text-align: center;
+  text-align: center;
 }
 
 .em-button {
-    margin: 50px 0;
-    justify-content: center;
+  margin: 50px 0;
+  justify-content: center;
 }
 
 .graphic-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--em-spacing-xs);
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--em-spacing-xs);
+  width: 100%;
 }
 
 .graphic-header .separator {
-    width: 100%;
-    height: 50px;
+  width: 100%;
+  height: 50px;
 }
 
 .text-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: var(--em-spacing-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--em-spacing-xl);
 }
 
 .em-input {
-    display: flex;
-    flex-direction: column;
-    margin: var(--em-spacing-l) 0;
+  display: flex;
+  flex-direction: column;
+  margin: var(--em-spacing-l) 0;
 }
 
-.send-form{
+.submit {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  gap: var(--em-spacing-m);
+}
+
+.send-form {
   padding: 0;
 }
+
 @media screen and (min-width: 1024px) {
-    .graphic-header .em-image-card {
-        aspect-ratio: 32/9;
-    }
-    form {
-        display: flex;
-        flex-direction: column;
-    }
+  .graphic-header .em-image-card {
+    aspect-ratio: 32/9;
+  }
 
-    .text-content{
-        margin: var(--em-spacing-3xl) 0 0 0;
-    }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
 
-    .general-informations {
-        display: flex;
-        flex-direction: column;
-        gap: 20px; /* Added gap between sections */
-    }
+  .text-content {
+    margin: var(--em-spacing-3xl) 0 0 0;
+  }
 
-    .legal {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr); /* 3 items per row */
-        gap: var(--em-spacing-m);
-    }
+  .general-informations {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* Added gap between sections */
+  }
 
-    .tournage,
-    .subject {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* 2 items per row */
-        gap: var(--em-spacing-m);
-    }
+  .legal {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 items per row */
+    gap: var(--em-spacing-m);
+  }
 
-    .tournage-subject{
-        display: flex;
-        gap: var(--em-spacing-4xl);
-        flex-direction: row;
-    }
+  .tournage,
+  .subject {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 items per row */
+    gap: var(--em-spacing-m);
+  }
 
-    .subject {
+  .tournage-subject {
+    display: flex;
+    gap: var(--em-spacing-4xl);
+    flex-direction: row;
+  }
+
+  .subject {
     display: flex;
     flex-direction: column;
     width: 100%;
-}
+  }
 
-.subject .em-input:has(textarea){
+  .subject .em-input:has(textarea) {
     height: 100%;
-}
+  }
 
-.production-informations {
+  .production-informations {
     display: grid;
-        grid-template-columns: repeat(3, 1fr); /* 2 items per row */
-        gap: var(--em-spacing-m);
-}
+    grid-template-columns: repeat(3, 1fr);
+    /* 2 items per row */
+    gap: var(--em-spacing-m);
+  }
 
-.misc-informations {
+  .misc-informations {
     margin: var(--em-spacing-4xl) 0;
     display: flex;
     flex-direction: column;
     gap: var(--em-spacing-m);
     align-items: center;
-}
+  }
 
-.submit{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-justify-content: center;
-gap: var(--em-spacing-m);
-}
-.submit a{
+  .submit a {
     display: flex;
     justify-content: center;
     align-items: center;
 
-}
-.submit .em-button{
-  width: fit-content;
-  margin: auto;
-}
-.send-form{
-  padding: 0;
-}
+  }
+
+  .submit .em-button {
+    width: fit-content;
+    margin: auto;
+  }
+
+  .send-form {
+    padding: 0;
+  }
 }
 </style>
