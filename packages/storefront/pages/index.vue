@@ -1,6 +1,12 @@
 <script setup lang="ts">
 import { EmButton, EmHeaderSeparator, EmImageCard, EmPortfolioSection, EmServiceSection, EmTextContent, EmTextSection } from '@e-medya-web/components'
 
+useHead({
+  title: 'E-medya - Accueil',
+  meta: [
+    { name: 'E-medya', content: 'E-medya home' },
+  ],
+})
 const header = {
   title: 'Donnez vie à vos idées',
   desc: 'Nous travaillons en étroite collaboration avec nos clients pour donner vie à leurs idées, en créant des clips, des reportages et des publicités qui reflètent leur vision et leur identité.',

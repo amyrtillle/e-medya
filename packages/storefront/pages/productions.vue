@@ -1,6 +1,12 @@
 <script setup lang="ts">
 import { EmHeaderSeparator, EmImageCard, EmPortfolioSection, EmTextContent } from '@e-medya-web/components'
 
+useHead({
+  title: 'E-medya - Nos productions',
+  meta: [
+    { name: 'E-medya', content: 'E-medya productions list' },
+  ],
+})
 const header = {
   title: 'Nos productions',
   desc: 'Vous souhaitez avoir un aperçu de nos productions avant de vous lancer dans une aventure avec nous ?',

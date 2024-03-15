@@ -1,6 +1,12 @@
 <script setup lang="ts">
 import { EmHeaderSeparator, EmInputs, EmTextContent } from '@e-medya-web/components'
 
+useHead({
+  title: 'Nous contacter',
+  meta: [
+    { name: 'E-medya', content: 'E-medya contact page' },
+  ],
+})
 const header = {
   title: 'Nous contacter',
   desc: 'Un doute, des interrogations, ou juste envie de discuter (ne faites pas ça s’il vous plait), appelez-nous ou envoyez nous un e-mail !',

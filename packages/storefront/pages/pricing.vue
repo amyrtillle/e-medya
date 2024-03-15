@@ -1,6 +1,12 @@
 <script setup lang="ts">
 import { EmHeaderSeparator, EmInputs, EmTextContent } from '@e-medya-web/components'
 
+useHead({
+  title: 'Demander un devis',
+  meta: [
+    { name: 'E-medya', content: 'E-medya pricing' },
+  ],
+})
 const header = {
   title: 'Demander un devis',
   desc: 'Si vous ne savez pas exactement le type de projet que vous souhaitez, le formulaire ci-dessous vous permet de répondre à des questions précises pour définir au mieux votre projet. Un entretient pour une définition exacte de votre projet sera convenu au besoin par notre équipe.',

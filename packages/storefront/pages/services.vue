@@ -1,6 +1,12 @@
 <script setup lang="ts">
 import { EmHeaderSeparator, EmImageCard, EmNote, EmServiceSection, EmTextContent } from '@e-medya-web/components'
 
+useHead({
+  title: 'E-medya - Nos services',
+  meta: [
+    { name: 'E-medya', content: 'E-medya services' },
+  ],
+})
 const header = {
   title: 'Nos services',
   desc: 'Nous proposons plusieurs types de prestations, que ce soit de la prise de vue simple pour vos projets, uniquement le montage vidéo ou la prise en charge complète de vos projets, nous serons là pour vous accompagner du début à la fin.',

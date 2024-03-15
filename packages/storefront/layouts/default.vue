@@ -9,7 +9,7 @@ const menuActive = ref(false)
     <header>
       <div class="nav">
         <a class="logo" href="/">
-          <img class="logo" src="../public/logo.svg" alt="E-Medya Web Logo">
+          <img class="logo" src="/logo.png" alt="E-Medya Web Logo">
         </a>
         <EmMenu v-model:active="menuActive" />
         <EmNavBar :class="{ menuActive }" />
