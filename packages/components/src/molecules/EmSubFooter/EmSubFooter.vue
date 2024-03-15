@@ -5,6 +5,8 @@ import { EmSocialSection, EmTextContent } from '../../components'
 <template>
   <div class="sub-footer">
     <EmTextContent size="s" typo="secondary" text="©2024 E-medya" />
+    <EmTextContent tag="a" size="s" typo="secondary" text="Conditions générales d'utilisations" href="/cgu.pdf" />
+    <EmTextContent tag="a" size="s" typo="secondary" text="Conditions générales de vente" href="/cgv.pdf" />
     <EmSocialSection />
   </div>
 </template>
