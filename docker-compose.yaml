@@ -1,0 +1,31 @@
+
+version: '3.8'
+networks:
+  web: ~
+services:
+  proxy:
+    build:
+      context: .
+      target: proxy
+      args:
+        DOMAIN: https://dummy
+    ports:
+      - '80:80'
+    depends_on:
+      - storefront
+    environment:
+      DOMAIN: http://www.local.e-medya.fr
+      BACKEND: http://storefront:3000
+      ENVIRONMENT: staging
+    networks:
+      web:
+        aliases:
+          - www.local.e-medya.fr
+  storefront:
+    build:
+      context: .
+      target: storefront
+      args:
+        DOMAIN: https://www.local.e-medya.fr
+    networks:
+      - web
