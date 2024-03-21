@@ -8,7 +8,14 @@ export default defineNuxtConfig({
     port: 3005,
   },
   runtimeConfig: {
-    public: publicEnv,
+    public: {
+      publicEnv,
+      assets: {
+        images: 'https://assets.e-medya.fr/apps/sharingpath/e-medya/images/',
+        documents: 'https://assets.e-medya.fr/apps/sharingpath/e-medya/documents/',
+        videos: 'https://assets.e-medya.fr/apps/sharingpath/e-medya/videos/',
+      },
+    },
   },
   modules: [
     '@unocss/nuxt',
