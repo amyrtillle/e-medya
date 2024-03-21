@@ -86,7 +86,7 @@ const aboutSection = {
   </div>
   <main>
     <EmServiceSection v-bind="serviceSection" />
-    <EmButton variant="secondary" label="En savoir plus" />
+    <EmButton variant="secondary" label="En savoir plus" link="/services" />
     <EmPortfolioSection
       v-bind="portfolioSection"
     />
