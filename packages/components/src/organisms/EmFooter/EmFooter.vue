@@ -1,5 +1,10 @@
 <script setup lang="ts">
 import { EmFooterContent, EmSubFooter } from '../../components'
+
+const props = defineProps<{
+  cgv: string
+  cgu: string
+}>()
 </script>
 
 <template>
@@ -7,7 +12,7 @@ import { EmFooterContent, EmSubFooter } from '../../components'
     <hr>
     <EmFooterContent />
     <hr>
-    <EmSubFooter />
+    <EmSubFooter :cgv="cgv" :cgu="cgu" />
   </div>
 </template>
 

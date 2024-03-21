@@ -2,6 +2,12 @@
 import { EmFooter, EmMenu, EmNavBar } from '@e-medya-web/components'
 
 const menuActive = ref(false)
+const assets = useRuntimeConfig().public.assets
+
+const conditions = {
+  cgv: `${assets.documents}cgv.pdf`,
+  cgu: `${assets.documents}cgu.pdf`,
+}
 </script>
 
 <template>
@@ -17,7 +23,7 @@ const menuActive = ref(false)
     </header>
     <slot />
     <footer :class="{ menuActive }">
-      <EmFooter />
+      <EmFooter v-bind="conditions" />
     </footer>
   </div>
 </template>
