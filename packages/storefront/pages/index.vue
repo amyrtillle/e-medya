@@ -9,7 +9,7 @@ useHead({
   ],
 })
 const header = {
-  title: 'Donnez vie à vos idées',
+  title: 'E-medya - Donnez vie à vos idées',
   desc: 'Nous travaillons en étroite collaboration avec nos clients pour donner vie à leurs idées, en créant des clips, des reportages et des publicités qui reflètent leur vision et leur identité.',
   img: `${assets.images}home-camera.jpg`,
   alt: 'camera image',
