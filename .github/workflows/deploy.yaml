@@ -16,5 +16,6 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         script: |
+          ls -la
           cd ~/volumes/e-medya
           ./deploy.sh
