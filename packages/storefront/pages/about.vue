@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { EmHeaderSeparator, EmImageCard, EmTextContent, EmTextSection } from '@e-medya-web/components'
 
+const assets = useRuntimeConfig().public.assets
 useHead({
   title: 'E-medya - À propos de nous',
   meta: [
@@ -10,7 +11,7 @@ useHead({
 const header = {
   title: 'À propos de nous',
   desc: 'Chez E-medya, notre passion pour la création de contenus vidéo de qualité nous pousse à repousser les limites de l\'innovation et de la créativité pour satisfaire pleinement les besoins de nos clients.',
-  img: '/assets/about-photo.jpg',
+  img: `${assets.images}about-photo.jpg`,
   alt: 'setup image',
 }
 

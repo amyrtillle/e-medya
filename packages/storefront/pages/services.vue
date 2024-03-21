@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { EmHeaderSeparator, EmImageCard, EmNote, EmServiceSection, EmTextContent } from '@e-medya-web/components'
 
+const assets = useRuntimeConfig().public.assets
 useHead({
   title: 'E-medya - Nos services',
   meta: [
@@ -10,7 +11,7 @@ useHead({
 const header = {
   title: 'Nos services',
   desc: 'Nous proposons plusieurs types de prestations, que ce soit de la prise de vue simple pour vos projets, uniquement le montage vidéo ou la prise en charge complète de vos projets, nous serons là pour vous accompagner du début à la fin.',
-  img: '/assets/services-clap.jpg',
+  img: `${assets.images}services-clap.jpg`,
   alt: 'clap image',
 }
 

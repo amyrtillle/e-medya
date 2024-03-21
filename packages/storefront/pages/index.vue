@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { EmButton, EmHeaderSeparator, EmImageCard, EmPortfolioSection, EmServiceSection, EmTextContent, EmTextSection } from '@e-medya-web/components'
 
+const assets = useRuntimeConfig().public.assets
 useHead({
   title: 'E-medya - Accueil',
   meta: [
@@ -10,7 +11,7 @@ useHead({
 const header = {
   title: 'Donnez vie à vos idées',
   desc: 'Nous travaillons en étroite collaboration avec nos clients pour donner vie à leurs idées, en créant des clips, des reportages et des publicités qui reflètent leur vision et leur identité.',
-  img: '/assets/home-camera.jpg',
+  img: `${assets.images}home-camera.jpg`,
   alt: 'camera image',
 }
 
@@ -43,20 +44,20 @@ const portfolioSection = {
   title: 'Le fruit de notre passion pour la vidéo',
   images: [
     {
-      src: '/assets/brasero-photo.png',
-      alt: 'random image',
+      src: `${assets.images}brasero-photo.png`,
+      alt: 'Made of Wood brasero',
       text: ['Brasero HomeMade', 'Vidéo de présentation des Braseros homemade sur demande et personnalisable par la société artisanale Made of Wood'],
       link: 'https://www.facebook.com/MadeOfWood38/videos/1878606152520042',
     },
     {
-      src: '/assets/baladecontee.webp',
-      alt: 'random image',
+      src: `${assets.images}baladecontee.webp`,
+      alt: 'Anim’Aventure balade contée',
       text: ['Laissez-vous emporter par la magie de leurs contées', 'Anim’Aventure propose des balades contées dans de magnifiques paysages naturels pour les plus petits comme les plus grands.'],
       link: 'https://youtu.be/Mt4ah74jMtk',
     },
     {
-      src: '/assets/escape_photo.webp',
-      alt: 'random image',
+      src: `${assets.images}escape_photo.webp`,
+      alt: 'Anim’Aventure escape game',
       text: ['Anim’Aventure propose des balades contées dans de magnifiques paysages naturels pour les plus petits comme les plus grands.', 'Anim’Aventure propose des balades contées dans de magnifiques paysages naturels pour les plus petits comme les plus grands.'],
       link: 'https://youtu.be/XlpTsXUYldM',
     },
@@ -90,7 +91,7 @@ const aboutSection = {
       v-bind="portfolioSection"
     />
     <EmTextSection v-bind="aboutSection" />
-    <EmButton variant="secondary" label="En savoir plus" />
+    <EmButton variant="secondary" label="En savoir plus" link="/about" />
   </main>
 </template>
 
