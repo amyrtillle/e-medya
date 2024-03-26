@@ -109,7 +109,7 @@ const form = {
     <EmTextContent :text="form.subTitle" tag="p" typo="secondary" variant="tertiary" />
     <form
       id="contact_form"
-      action="https://formspree.io/f/mdoqdjgv"
+      action="http://backoffice.e-medya.fr/validate-form/contact"
       method="POST"
       enctype="multipart/form-data"
     >
