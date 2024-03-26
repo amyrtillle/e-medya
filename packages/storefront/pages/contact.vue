@@ -114,7 +114,7 @@ const form = {
       enctype="multipart/form-data"
     >
       <div>
-        <EmInputs v-for="field in form.fields" :key="field.id" :name="field.id" :type="field.type" :label="field.label" :required="field.required" :placeholder="field.placeholder" :src="field.img" :options="field.options" />
+        <EmInputs v-for="field in form.fields" :id="field.id" :key="field.id" :name="field.id" :type="field.type" :label="field.label" :required="field.required" :placeholder="field.placeholder" :src="field.img" :options="field.options" />
       </div>
 
       <EmInputs type="submit" label="Envoyer" class="send-form" />

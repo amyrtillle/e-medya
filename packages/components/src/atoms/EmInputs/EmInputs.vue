@@ -76,7 +76,7 @@ onBeforeUnmount(() => {
 
 <template>
   <div v-if="type == 'submit'" class="content">
-    <input type="submit" :name="label" :value="label" class="input">
+    <input type="submit" :name="name" :value="label" class="input">
   </div>
   <div v-else-if="type == 'textarea'" class="em-input">
     <div class="content">
@@ -94,7 +94,7 @@ onBeforeUnmount(() => {
 
     <!-- input -->
     <textarea
-      :id="name" class="input" :aria-label="ariaLabel" :class="type" :placeholder="placeholder" :name="label"
+      :id="name" class="input" :aria-label="ariaLabel" :class="type" :placeholder="placeholder" :name="name"
       :required="required"
     />
   </div>
@@ -115,14 +115,14 @@ onBeforeUnmount(() => {
     <!-- input -->
     <input
       :id="name" class="input" :aria-label="ariaLabel" :class="type" :type="type" :placeholder="placeholder"
-      :name="label" :required="required"
+      :name="name" :required="required"
     >
   </div>
 
   <div v-else-if="type == 'checkbox'" class="em-checkbox">
     <span class="checkbox">
       <input
-        :id="name" class="input" :class="type" :type="type" :placeholder="placeholder" :name="label"
+        :id="name" class="input" :class="type" :type="type" :placeholder="placeholder" :name="name"
         :required="required"
       >
       <svg>
@@ -166,7 +166,7 @@ onBeforeUnmount(() => {
         </div>
       </div>
     </div>
-    <input type="hidden" :name="label" :value="mappedSelectedOption">
+    <input type="hidden" :name="name" :value="mappedSelectedOption">
   </div>
 </template>
 
