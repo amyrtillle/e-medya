@@ -10,6 +10,7 @@ withDefaults(defineProps<InputProps & IconProps>(), {
   id: 'id',
   class: 'class',
   required: false,
+  accept: 'application/pdf,.zip',
   options: [
     {
       value: 'value',
@@ -95,7 +96,7 @@ onBeforeUnmount(() => {
     <!-- input -->
     <textarea
       :id="name" class="input" :aria-label="ariaLabel" :class="type" :placeholder="placeholder" :name="name"
-      :required="required"
+      :required="required" value="value"
     />
   </div>
   <div v-else-if="type != 'select' && type != 'checkbox'" class="em-input">
@@ -116,6 +117,7 @@ onBeforeUnmount(() => {
     <input
       :id="name" class="input" :aria-label="ariaLabel" :class="type" :type="type" :placeholder="placeholder"
       :name="name" :required="required"
+      value="value" :accept="accept"
     >
   </div>
 

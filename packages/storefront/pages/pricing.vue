@@ -314,7 +314,7 @@ const form = {
             },
             {
               id: 'scenarioFile',
-              label: 'Si oui, merci de le joindre ici',
+              label: 'Si oui, merci de le joindre ici (.pdf uniquement)',
               type: 'file',
               img: 'folder',
             },
@@ -416,7 +416,7 @@ const form = {
             },
             {
               id: 'visualIdentityFile',
-              label: 'Si oui, veuillez la mettre en pièce jointe',
+              label: 'Si oui, veuillez la mettre en pièce jointe (.zip uniquement)',
               type: 'file',
               img: 'folder',
             },
@@ -519,12 +519,6 @@ const form = {
         />
       </div>
       <div class="submit">
-        <a href="/cgu.pdf">
-          <EmInputs
-            type="checkbox" name="cgu" label="J'accepte les conditions générales d’utilisations."
-            required="true"
-          />
-        </a>
         <EmInputs type="submit" label="Envoyer" class="send-form" />
       </div>
     </form>

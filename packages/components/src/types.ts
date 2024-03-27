@@ -44,6 +44,7 @@ export interface InputProps {
   icon?: Icon
   name: string
   ariaLabel?: string
+  accept?: string
   options?: [
     {
       value: string
