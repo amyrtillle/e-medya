@@ -117,7 +117,7 @@ onBeforeUnmount(() => {
     <input
       :id="name" class="input" :aria-label="ariaLabel" :class="type" :type="type" :placeholder="placeholder"
       :name="name" :required="required"
-      value="value" :accept="accept"
+      :accept="accept"
     >
   </div>
 
