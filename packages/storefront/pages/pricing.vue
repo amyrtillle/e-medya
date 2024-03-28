@@ -475,7 +475,7 @@ const form = {
     <EmTextContent :text="header.secondDesc" tag="p" typo="secondary" />
   </div>
   <main>
-    <form id="contact_form" action="https://backoffice.e-medya.fr/validate-form/pricing" method="POST" enctype="multipart/form-data">
+    <form id="contact_form" action="localhost/validate-form/pricing" method="POST" enctype="multipart/form-data">
       <EmTextContent :text="form.title" tag="h2" typo="secondary" variant="tertiary" />
       <EmTextContent :text="form.subTitle" tag="p" typo="secondary" variant="tertiary" />
       <div class="general-informations">
