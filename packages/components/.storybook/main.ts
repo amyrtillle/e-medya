@@ -18,7 +18,7 @@ const config = {
   typescript: {
     check: true
   },
-  staticDirs: [{from: '../../storefront/assets', to: '/assets'}]
+  // staticDirs: [{from: '/assets', to: '/assets'}]
 } satisfies StorybookConfig;
 
 export default config;
