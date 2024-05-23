@@ -10,7 +10,7 @@ useHead({
 const header = {
   title: 'Nous contacter',
   desc: 'Un doute, des interrogations, ou juste envie de discuter (ne faites pas ça s’il vous plait), appelez-nous ou envoyez nous un e-mail !',
-  secondDesc: 'Si vous ne souhaitez pas nous appeler ou que vous souhaitez nous contacter en dehors de nos horaires d’ouvertures, veuillez remplir le formulaire ci-dessous (ou nous envoyer directment un e-mail à amylee.bausano@gmail.com)',
+  secondDesc: 'Si vous ne souhaitez pas nous appeler ou que vous souhaitez nous contacter en dehors de nos horaires d’ouvertures, veuillez remplir le formulaire ci-dessous (ou nous envoyer directment un e-mail à contact@e-medya.fr)',
 }
 
 const form = {
