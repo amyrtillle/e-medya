@@ -17,7 +17,7 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         script: |
           echo "Start deplyoment"
-          cd ~/volumes/e-medya/app
-          git pull
+          cd ~/volumes/e-medya
+          ./deploy.sh
           echo "End of deployment"
 
