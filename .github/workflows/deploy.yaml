@@ -18,6 +18,6 @@ jobs:
         script: |
           echo "Start deplyoment"
           cd ~/volumes/e-medya
-          ./deploy.sh
+          git pull
           echo "End of deployment"
 
