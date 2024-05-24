@@ -51,16 +51,16 @@ const portfolioSection = {
       link: 'https://www.facebook.com/MadeOfWood38/videos/1878606152520042',
     },
     {
+      src: `${assets.images}noisefest-photo.png`,
+      alt: 'Noisefest festival youtube miniature',
+      text: ['Noisefest 4', 'Video au format vlog du festival de musique electronique Noisefest édition 2023'],
+      link: 'https://youtu.be/08jvfZtprME',
+    },
+    {
       src: `${assets.images}baladecontee.webp`,
       alt: 'Anim’Aventure balade contée',
       text: ['Laissez-vous emporter par la magie de leurs contées', 'Anim’Aventure propose des balades contées dans de magnifiques paysages naturels pour les plus petits comme les plus grands.'],
       link: 'https://youtu.be/Mt4ah74jMtk',
-    },
-    {
-      src: `${assets.images}escape_photo.webp`,
-      alt: 'Anim’Aventure escape game',
-      text: ['Anim’Aventure propose des balades contées dans de magnifiques paysages naturels pour les plus petits comme les plus grands.', 'Anim’Aventure propose des balades contées dans de magnifiques paysages naturels pour les plus petits comme les plus grands.'],
-      link: 'https://youtu.be/XlpTsXUYldM',
     },
   ],
   button: {
@@ -125,10 +125,6 @@ const aboutSection = {
 @media screen and (min-width: 1024px) {
   .graphic-header .em-image-card{
   aspect-ratio: 32/9;
-}
-
-.portfolio-section {
-  margin-bottom: 150px;
 }
 
 }

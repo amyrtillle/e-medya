@@ -21,6 +21,12 @@ const portfolioSection = {
   title: 'Retrouvez toutes nos productions ici',
   images: [
     {
+      src: `${assets.images}noisefest-photo.png`,
+      alt: 'Noisefest festival youtube miniature',
+      text: ['Noisefest 4', 'Dans cette vidéo au format vlog nous suivons la créatrice de contenu de la chaine youtube "anemyx" dans son expérience à la 4ème édition du festival Noisefest.'],
+      link: 'https://youtu.be/08jvfZtprME',
+    },
+    {
       src: `${assets.images}brasero-photo.png`,
       alt: 'Made of Wood brasero',
       text: ['Brasero Artisanal', 'Nous sommes fièr.e.s de vous présenter notre vidéo publicitaire pour Made of Wood, une entreprise artisanale dans le secteur de la fabrication de meubles, agencement, pose de menuiserie qui crée aussi des braseros sur mesure, faits à la main avec passion et expertise. Notre vidéo capture l’essence de leur processus de création et de leur engagement envers des produits de qualité supérieur.'],
@@ -97,8 +103,5 @@ main{
   aspect-ratio: 32/9;
 }
 
-.portfolio-section {
-  margin-bottom: 150px;
-}
 }
 </style>

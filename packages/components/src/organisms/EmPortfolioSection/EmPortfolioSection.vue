@@ -42,26 +42,26 @@ defineProps<{
   width: 100%;
 }
 
-.em-button{
-  margin: 25px 0
-}
-
 @media screen and (min-width: 768px) {
   .images {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: var(--em-spacing-3xl);
   }
 
+  .section-image{
+    margin-bottom: var(--em-spacing-5xl);
+  }
   .section-image:nth-child(2n+1) {
     grid-column: 2;
   }
 
-  .section-image:nth-child(2){
-    margin-top: -250px;
+  .section-image:nth-child(2n+2){
+    margin-top: -450px;
   }
 
   .section-button{
-    margin-top: -150px;
+    bottom: 0;
   }
 }
 </style>
