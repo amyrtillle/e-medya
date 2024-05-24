@@ -96,7 +96,7 @@ onBeforeUnmount(() => {
     <!-- input -->
     <textarea
       :id="name" class="input" :aria-label="ariaLabel" :class="type" :placeholder="placeholder" :name="name"
-      :required="required" value="value"
+      :required="required"
     />
   </div>
   <div v-else-if="type != 'select' && type != 'checkbox'" class="em-input">

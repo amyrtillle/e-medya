@@ -47,7 +47,7 @@ export interface InputProps {
   accept?: string
   options?: [
     {
-      value: string
+      value?: string
       text: string
     },
   ]
