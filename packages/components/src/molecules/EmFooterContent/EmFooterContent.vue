@@ -18,7 +18,7 @@ import EmTextContent from '../../atoms/EmTextContent/EmTextContent.vue'
       </div>
       <div class="mail">
         <EmTextContent tag="span" text="Envoyez nous un mail à " />
-        <EmTextContent tag="a" variant="tertiary" href="mailto:contact@e-medya.fr" text="contact@e-medya.fr" />
+        <EmTextContent tag="a" variant="tertiary" href="mailto:amy-lee.bausano@gmail.com" text="amy-lee.bausano@gmail.com" />
       </div>
       <div class="phone">
         <EmTextContent tag="span" text="Si vous ne pouvez pas attendre, contactez-nous au " />
