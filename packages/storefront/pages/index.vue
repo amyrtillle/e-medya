@@ -6,7 +6,7 @@ useHead({
   title: 'E-medya - Accueil',
   meta: [
     { name: 'E-medya', content: 'E-medya home' },
-    { name: 'google-site-verification', content: 'bBD8myhW-DHRtpzZU1DKtB6BQ3x4CI6KqWAvpdrxPhM' },
+    { name: 'google-site-verification', content: 'HQgvZ8ajvn02_K1ZpAAtwh9NmkFoor3bPgw6SwEmHAM' },
   ],
 })
 const header = {
