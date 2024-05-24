@@ -1,15 +1,14 @@
 <script setup lang="ts">
 import { EmSectionTitle, EmServiceCard } from '../../components'
+import type { Icon } from '../../types'
 
-const props = defineProps<{
+defineProps<{
   headline: string
   title: string
   cards: {
     title: string
-    texts: Array<{
-      text: string
-    }>
-    icon: string
+    texts: string[]
+    icon: Icon
   }[]
 
 }>()

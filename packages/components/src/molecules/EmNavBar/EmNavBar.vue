@@ -16,7 +16,7 @@ import { EmButton, EmTextContent } from '../../components'
 nav{
   background-color: var(--em-color-purple-mountain-majesty);
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   flex-direction: column;
   width: fit-content;
   height: fit-content;

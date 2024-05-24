@@ -1,16 +1,11 @@
 <script setup lang="ts">
 import { EmIcon, EmTextContent } from '../../components'
+import type { Icon } from '../../types'
 
-const props = defineProps<{
-  title: {
-    type: string
-  }
-  icon: {
-    type: string
-  }
-  texts: {
-    text: string
-  }[]
+defineProps<{
+  title: string
+  icon: Icon
+  texts: string[]
 
 }>()
 </script>

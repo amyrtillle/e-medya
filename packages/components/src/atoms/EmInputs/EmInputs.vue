@@ -196,7 +196,7 @@ onBeforeUnmount(() => {
   flex-direction: row;
   padding-left: var(--em-spacing-xl);
   gap: var(--em-spacing-s);
-  align-items: end;
+  align-items: flex-end;
 }
 
 .label {
