@@ -7,6 +7,9 @@ export default defineNuxtConfig({
     host: 'localhost',
     port: 3005,
   },
+  site: {
+    url: 'https://e-medya.fr',
+  },
   runtimeConfig: {
     public: {
       publicEnv,
@@ -17,10 +20,7 @@ export default defineNuxtConfig({
       },
     },
   },
-  modules: [
-    '@unocss/nuxt',
-    '@vueuse/nuxt',
-  ],
+  modules: ['@unocss/nuxt', '@vueuse/nuxt', '@nuxtjs/sitemap'],
   css: [
     '@e-medya-web/css-core',
     '@fontsource/inter/400.css',
