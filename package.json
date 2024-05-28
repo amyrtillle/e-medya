@@ -2,7 +2,7 @@
   "name": "@e-medya/root",
   "version": "1.0.0",
   "private": true,
-  "packageManager": "pnpm@8.6.5",
+  "packageManager": "pnpm@8.9.0",
   "engines": {
     "node": ">=20.0.0"
   },
@@ -13,7 +13,6 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@antfu/eslint-config": "^0.39.7",
     "@commitlint/config-conventional": "^17.6.6",
     "@rollup/rollup-win32-ia32-msvc": "^4.9.6",
     "@rollup/rollup-linux-arm64-gnu": "^4.9.6",

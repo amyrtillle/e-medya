@@ -22,6 +22,8 @@ RUN pnpm --filter @e-medya-web/storefront build
 # Set working directory to storefront
 WORKDIR /app/packages/storefront
 
+RUN pnpm install
+
 # Build the project again to ensure everything is in place
 RUN pnpm build
 

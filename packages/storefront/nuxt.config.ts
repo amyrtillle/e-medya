@@ -1,5 +1,4 @@
 import shared from '@e-medya-web/shared/vite'
-import unocss from '@e-medya-web/unocss-preset'
 import { publicEnv } from './config/env'
 
 export default defineNuxtConfig({
@@ -20,7 +19,7 @@ export default defineNuxtConfig({
       },
     },
   },
-  modules: ['@unocss/nuxt', '@vueuse/nuxt', '@nuxtjs/sitemap'],
+  modules: ['@vueuse/nuxt', '@nuxtjs/sitemap'],
   css: [
     '@e-medya-web/css-core',
     '@fontsource/inter/400.css',
@@ -29,7 +28,7 @@ export default defineNuxtConfig({
     '@fontsource/outfit/700.css',
   ],
   experimental: {
-    inlineSSRStyles: false,
+    externalVue: false,
   },
   imports: {
     dirs: ['composables/**'],
@@ -41,8 +40,4 @@ export default defineNuxtConfig({
     plugins: [shared()],
   },
   telemetry: false,
-  // modules
-  unocss: {
-    presets: [unocss()],
-  },
 })
